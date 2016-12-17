@@ -1,0 +1,24 @@
+{% block content %}
+    {% load staticfiles %}
+
+    <section class="main col-12">
+        <div class="description col-6">
+            <h1 class="small_title"> Kalkulator življenjskih stroškov </h1>
+            <p>
+                Spletna aplikacija Kalkulator stroškov uporabnikom omogoča vnos izdatkov po kategorijah,
+                pregled nad porabo denarja, pomoč pri izpolnjevanju varčevalnih ciljev uporabnika
+                in pa vizualni pregled porabe in varčevanja.
+            </p>
+            <p> Uporabljene tehnologije: </p>
+            <ul>
+                <li> HTML5 </li>
+                <li> CSS3 </li>
+                <li> Javascript </li>
+            </ul>
+        </div>
+
+        <div class="main_picture col-6">
+            <img src="{% static 'images/money.jpg' %}" alt="Money">
+        </div>
+    </section>
+{% endblock %}

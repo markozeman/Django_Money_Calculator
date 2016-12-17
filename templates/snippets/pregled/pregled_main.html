@@ -1,0 +1,61 @@
+{% block content %}
+    <section class="main col-12">
+        <div class="dropdown">
+            <select onchange="showGoal_2(this)" id="pregled_select">
+                <option value="wallet"> Denarnica </option>
+                <option value="bank"> Banka </option>
+                <option value="goals"> Cilji </option>
+            </select>
+        </div>
+
+        <div class="not_goal_results col-12">
+            <form method="get" onsubmit="return get_data()" id="pregled_form">
+                <div class="choose_option col-3">
+                    <select>
+                        <option value="vsi_izdatki"> Vsi izdatki </option>
+                        <option value="vsi_izdatki"> Vsi prejemki </option>
+                        <option value="vse_transakcije"> Vse transakcije </option>
+                        <option value="hrana"> Hrana </option>
+                        <option value="oblacila"> Oblačila, obutev </option>
+                        <option value="tehnika"> Tehnika </option>
+                        <option value="popravila"> Popravila </option>
+                        <option value="gospodinjstvo"> Gospodinjstvo </option>
+                        <option value="prevoz"> Prevoz </option>
+                        <option value="pocitnice"> Počitnice, potovanja </option>
+                        <option value="darila"> Darila </option>
+                        <option value="drugo"> Drugo </option>
+
+                        <option value="placa"> Plača </option>
+                        <option value="ostali_prihodki"> Ostali prihodki </option>
+
+                        <option value="dvig"> Dvig gotovine </option>
+                        <option value="polog"> Polog gotovine </option>
+                    </select>
+                </div>
+
+                <div class="choose_period col-3">
+                    <select>
+                        <option value="teden"> Zadnji teden </option>
+                        <option value="mesec"> Zadnji mesec </option>
+                        <option value="leto"> Zadnje leto </option>
+                    </select>
+                </div>
+
+                <div class="confirm col-2">
+                    <input type="submit" name="preglej" value="Preglej">
+                </div>
+            </form>
+        </div>
+
+        <div class="result_set col-12">
+            <p> Rezultati iskanja... </p>
+            <!-- izdelek, vrednost, datum -->
+            <!-- za banko --- polog ali dvig, vrednost, datum -->
+        </div>
+
+        <div class="goal_results col-12" style="display: none;">
+            <p> Prikazani cilji in njihovo stanje... </p>
+            <!-- prikaže vse cilje in njihovo stanje (mogoče progress bar) -->
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% block content %}
+    {% load staticfiles %}
+    <header class="header col-12">
+        <div class="col-1">
+            <a href="index.html"> <img src="{% static 'images/logo.jpg' %}" class="logo" alt="Logo"> </a>
+        </div>
+        <div class="title col-5">
+            <h1> Kalkulator stroškov </h1>
+        </div>
+        <div class="slogan col-4">
+            <h3> Be smart, save money </h3>
+        </div>
+        <div class="login col-2">
+            <a href="registracija.html"> <button type="button" class="registration"> Registracija </button> </a>
+        </div>
+    </header>
+{% endblock %}

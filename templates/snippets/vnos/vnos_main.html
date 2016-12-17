@@ -1,0 +1,93 @@
+{% block content %}
+    <section class="main col-12">
+        <div class="dropdown">
+            <select class="select_dropdown" onchange="showGoal(this)">
+                <option value="wallet"> Denarnica </option>
+                <option value="bank"> Banka </option>
+                <option value="new_goal"> Nov cilj </option>
+                <option value="goal_add_money"> Privarčuj za cilj </option>
+            </select>
+        </div>
+
+        <div class="add_data">
+            <div class="input col-12">
+                <form method="post" onsubmit="return add_or_take_money()" id="add_data">
+                    <div class="col-3">
+                        Opis: <input type="text" name="opis" placeholder="Vnesite opis...">
+                    </div>
+                    <div class="col-3">
+                        Znesek v €: <input type="text" name="znesek" placeholder="Vnesite znesek...">
+                    </div>
+                    <div class="col-3">
+                        <select id="select_category">
+                            <option value="hrana"> Hrana </option>
+                            <option value="oblacila"> Oblačila, obutev </option>
+                            <option value="tehnika"> Tehnika </option>
+                            <option value="popravila"> Popravila </option>
+                            <option value="gospodinjstvo"> Gospodinjstvo </option>
+                            <option value="prevoz"> Prevoz </option>
+                            <option value="pocitnice"> Počitnice, potovanja </option>
+                            <option value="darila"> Darila </option>
+                            <option value="drugo"> Drugo </option>
+
+                            <option value="placa"> Plača </option>
+                            <option value="ostali_prihodki"> Ostali prihodki </option>
+
+                            <option value="dvig"> Dvig gotovine </option>
+                            <option value="polog"> Polog gotovine </option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <input type="submit" name="plus" value="Dodaj" onclick="Clicked(this);">
+                    </div>
+                    <div class="col-1">
+                        <input type="submit" name="minus" value="Odvzemi" class="minus_button" onclick="Clicked(this);">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="new_goals" style="display: none;">
+            <div class="col-12">
+                <form method="post" onsubmit="return add_goal()" id="add_goal">
+                    <div class="col-3">
+                        Varčujem za: <input type="text" name="opis_privarcevanja" placeholder="Vnesite cilj varčevanja...">
+                    </div>
+                    <div class="col-3">
+                        Vrednost v €: <input type="text" name="vrednost" placeholder="Vnesite vrednost...">
+                    </div>
+                    <div class="col-4">
+                        Privarčeval bom do: <input type="date" name="datum"> <br>
+                    </div>
+                    <div class="col-2">
+                        <input type="submit" value="Dodaj">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="add_to_goal" style="display: none;">
+            <div class="col-12">
+                <form method="post" onsubmit="return add_to_goal()" id="add_to_goal">
+                    <div class="col-4">
+                        Vrednost v €: <input type="text" name="vrednost" placeholder="Vnesite vrednost...">
+                    </div>
+                    <div class="col-3">
+                        <select>
+                            <option value="wallet"> Vzemi iz denarnice </option>
+                            <option value="bank"> Vzemi iz banke </option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <select id="goals">
+
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <input type="submit" value="Dodaj">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

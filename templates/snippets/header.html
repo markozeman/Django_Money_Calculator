@@ -2,16 +2,25 @@
     {% load staticfiles %}
     <header class="header col-12">
         <div class="col-1">
-            <a href="index.html"> <img src="{% static 'images/logo.jpg' %}" class="logo" alt="Logo"> </a>
+            <img src="{% static 'images/logo.jpg' %}" class="logo" alt="Logo">
         </div>
         <div class="title col-5">
             <h1> Kalkulator stroškov </h1>
         </div>
-        <div class="slogan col-4">
-            <h3> Be smart, save money </h3>
-        </div>
-        <div class="login col-2">
-            <a href="registracija.html"> <button type="button" class="registration"> Registracija </button> </a>
-        </div>
+        {% if user.is_authenticated %}
+            <div class="slogan col-4">
+                <h3> {{ user.username }} : Be smart, save money </h3>
+            </div>
+            <div class="login col-2">
+                <a href="{% url 'logout' %}"> <button type="button" class="registration"> Odjava </button> </a>
+            </div>
+        {% else %}
+            <div class="slogan col-4">
+                <h3> Be smart, save money </h3>
+            </div>
+            <div class="login col-2">
+                <a href="{% url 'registration' %}"> <button type="button" class="registration"> Registracija </button> </a>
+            </div>
+        {% endif %}
     </header>
 {% endblock %}

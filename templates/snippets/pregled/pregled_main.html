@@ -10,6 +10,7 @@
 
         <div class="not_goal_results col-12">
             <form method="get" onsubmit="return get_data()" id="pregled_form">
+                {% csrf_token %}
                 <div class="choose_option col-3">
                     <select>
                         <option value="vsi_izdatki"> Vsi izdatki </option>

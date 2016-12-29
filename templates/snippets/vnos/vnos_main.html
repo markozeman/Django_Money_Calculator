@@ -1,7 +1,7 @@
 {% block content %}
     <section class="main col-12">
-        <div class="dropdown">
-            <select class="select_dropdown" onchange="showGoal(this)">
+        <div class="dropdown" style="margin: 30px">
+            <select class="select_dropdown" name="dropdown" onchange="showGoal(this)">
                 <option value="wallet"> Denarnica </option>
                 <option value="bank"> Banka </option>
                 <option value="new_goal"> Nov cilj </option>
@@ -11,7 +11,16 @@
 
         <div class="add_data">
             <div class="input col-12">
-                <form method="post" onsubmit="return add_or_take_money()" id="add_data">
+                <form method="post" id="add_data" action="{% url 'dodaj' %}">
+                    {% csrf_token %}
+
+                    <div class="dropdown" style="margin: 30px">
+                        <select class="select_dropdown" name="dropdown" onchange="showGoal(this)">
+                            <option value="wallet"> Uporabi denarnico </option>
+                            <option value="bank"> Uporabi bančni račun </option>
+                        </select>
+                    </div>
+
                     <div class="col-3">
                         Opis: <input type="text" name="opis" placeholder="Vnesite opis...">
                     </div>
@@ -19,7 +28,7 @@
                         Znesek v €: <input type="text" name="znesek" placeholder="Vnesite znesek...">
                     </div>
                     <div class="col-3">
-                        <select id="select_category">
+                        <select id="select_category" name="kategorija">
                             <option value="hrana"> Hrana </option>
                             <option value="oblacila"> Oblačila, obutev </option>
                             <option value="tehnika"> Tehnika </option>
@@ -49,7 +58,8 @@
 
         <div class="new_goals" style="display: none;">
             <div class="col-12">
-                <form method="post" onsubmit="return add_goal()" id="add_goal">
+                <form method="post" id="add_goal" action="{% url 'dodaj_cilj' %}">
+                    {% csrf_token %}
                     <div class="col-3">
                         Varčujem za: <input type="text" name="opis_privarcevanja" placeholder="Vnesite cilj varčevanja...">
                     </div>
@@ -68,19 +78,22 @@
 
         <div class="add_to_goal" style="display: none;">
             <div class="col-12">
-                <form method="post" onsubmit="return add_to_goal()" id="add_to_goal">
+                <form method="post" id="add_to_goal" action="{% url 'dodaj_cilju' %}">
+                    {% csrf_token %}
                     <div class="col-4">
                         Vrednost v €: <input type="text" name="vrednost" placeholder="Vnesite vrednost...">
                     </div>
                     <div class="col-3">
-                        <select>
+                        <select name="vzemi_iz">
                             <option value="wallet"> Vzemi iz denarnice </option>
                             <option value="bank"> Vzemi iz banke </option>
                         </select>
                     </div>
                     <div class="col-3">
-                        <select id="goals">
-
+                        <select id="goals" name="za_cilj">
+                            {% for goal in request.user.cilj_set.all %}
+                                <option value="{{ goal.opis }}"> {{ goal.opis }} </option>
+                            {% endfor %}
                         </select>
                     </div>
                     <div class="col-2">

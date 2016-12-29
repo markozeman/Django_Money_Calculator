@@ -1,7 +1,8 @@
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
 
 from .models import *
 
@@ -24,24 +25,23 @@ def register_user(request):
 
         if (not username_taken):
             new_user = User.objects.create_user(usr, None, passwd_1)
-            new_user.save()
 
-            uporabnik = Uporabnik(uporabnik=new_user)
-            uporabnik.save()
+            new_user.stanje_set.create(tip="banka", stanje=0.0)
+            new_user.stanje_set.create(tip="denarnica", stanje=0.0)
 
-            bancno_stanje = Stanje(tip="banka", stanje=0.0, uporabnik=uporabnik)
-            bancno_stanje.save()
-
-            denarnica_stanje = Stanje(tip="denarnica", stanje=0.0, uporabnik=uporabnik)
-            denarnica_stanje.save()
-
+            messages.error(request, 'User registered.')
             print("\nUser registered.\n")
             return HttpResponseRedirect(reverse('registration'))
         else:
+            messages.error(request, 'This username is already taken.')
             print("\nThis username is already taken.\n")
             return HttpResponseRedirect(reverse('registration'))
     else:
+        messages.error(request, 'Passwords are not the same or username is not longer than 5 characters or captcha is not clicked.')
         print("\nPasswords are not the same or username is not longer than 5 characters or captcha is not clicked.\n")
+        return HttpResponseRedirect(reverse('registration'))
+
+
 
 
 

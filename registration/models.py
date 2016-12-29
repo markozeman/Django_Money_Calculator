@@ -6,28 +6,27 @@ from django.contrib.auth.models import User
 from datetime import datetime
 
 
-
-class Uporabnik(models.Model):
-    uporabnik = models.OneToOneField(User, on_delete=models.CASCADE)
-    # bancno_stanje = models.OneToOneField(Stanje, on_delete=models.CASCADE)
-    # denarnica_stanje = models.OneToOneField(Stanje, on_delete=models.CASCADE)
-    #cilji = models.ManyToOneRel("Cilj", on_delete=models.CASCADE)
-    #transakcije = models.ManyToManyField(Transakcija, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.uporabnik
+# class Uporabnik(models.Model):
+#     uporabnik = models.OneToOneField(User, on_delete=models.CASCADE)
+#     # bancno_stanje = models.OneToOneField(Stanje, on_delete=models.CASCADE)
+#     # denarnica_stanje = models.OneToOneField(Stanje, on_delete=models.CASCADE)
+#     #cilji = models.ManyToOneRel("Cilj", on_delete=models.CASCADE)
+#     #transakcije = models.ManyToManyField(Transakcija, on_delete=models.CASCADE)
+#
+#     def __str__(self):
+#         return self.uporabnik.username
 
 
 class Stanje(models.Model):
     tip = models.CharField(max_length=20, default='')
     stanje = models.FloatField(default=0)
-    uporabnik = models.ForeignKey(Uporabnik, on_delete=models.CASCADE, default='')
+    uporabnik = models.ForeignKey(User, on_delete=models.CASCADE, default='')
 
     #izdatki = models.ForeignKey(IzdatekPrejemek)
     #prejemki = models.ForeignKey(IzdatekPrejemek)
 
     def __str__(self):
-        return self.tip
+        return ("{}: {}".format(self.tip, self.stanje))
 
 
 class IzdatekPrejemek(models.Model):
@@ -40,17 +39,17 @@ class IzdatekPrejemek(models.Model):
     stanje = models.ForeignKey(Stanje, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.tip
+        return ("{}, {}, {}, {}, {}".format(self.tip, self.banka_denarnica, self.opis, self.kategorija, self.datum))
 
 
-class Transakcija(models.Model):
-    opis = models.CharField(max_length=100, default='')
-    znesek = models.FloatField()
-    smer = models.CharField(max_length=20)
-    uporabnik = models.ForeignKey(Uporabnik, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.opis
+# class Transakcija(models.Model):
+#     opis = models.CharField(max_length=100, default='')
+#     znesek = models.FloatField()
+#     smer = models.CharField(max_length=20)
+#     uporabnik = models.ForeignKey(User, on_delete=models.CASCADE)
+#
+#     def __str__(self):
+#         return ("{}, {}, {}".format(self.opis, self.znesek, self.smer))
 
 
 class Cilj(models.Model):
@@ -59,10 +58,10 @@ class Cilj(models.Model):
     trenutno_privarcevano = models.FloatField(default=0)
     od_datuma = models.DateTimeField(default=datetime.now)
     do_datuma = models.DateTimeField()
-    uporabnik = models.ForeignKey(Uporabnik, on_delete=models.CASCADE)
+    uporabnik = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.opis
+        return ("{}, {}/{}, {}-{}".format(self.opis, self.trenutno_privarcevano, self.vrednost, self.od_datuma, self.do_datuma))
 
 
 

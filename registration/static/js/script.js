@@ -662,7 +662,19 @@ function find_user_by_username (username) {
 }
 
 
+function change_pregled_dropdown(el) {
+    first_select = document.getElementsByClassName("choose_option")[0].firstChild.nextSibling;
+    second_select = document.getElementsByClassName("choose_period")[0].firstChild.nextSibling;
 
+    if (el.value == "goals") {
+        first_select.style.visibility = "hidden";
+        second_select.style.visibility = "hidden";
+    }
+    else {
+        first_select.style.visibility = "visible";
+        second_select.style.visibility = "visible";
+    }
+}
 
 
 /*

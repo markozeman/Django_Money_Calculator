@@ -42,16 +42,6 @@ class IzdatekPrejemek(models.Model):
         return ("{}, {}, {}, {}, {}".format(self.tip, self.banka_denarnica, self.opis, self.kategorija, self.datum))
 
 
-# class Transakcija(models.Model):
-#     opis = models.CharField(max_length=100, default='')
-#     znesek = models.FloatField()
-#     smer = models.CharField(max_length=20)
-#     uporabnik = models.ForeignKey(User, on_delete=models.CASCADE)
-#
-#     def __str__(self):
-#         return ("{}, {}, {}".format(self.opis, self.znesek, self.smer))
-
-
 class Cilj(models.Model):
     opis = models.CharField(max_length=150, default='')
     vrednost = models.FloatField()
@@ -64,5 +54,12 @@ class Cilj(models.Model):
         return ("{}, {}/{}, {}-{}".format(self.opis, self.trenutno_privarcevano, self.vrednost, self.od_datuma, self.do_datuma))
 
 
-
+# class Transakcija(models.Model):
+#     opis = models.CharField(max_length=100, default='')
+#     znesek = models.FloatField()
+#     smer = models.CharField(max_length=20)
+#     uporabnik = models.ForeignKey(User, on_delete=models.CASCADE)
+#
+#     def __str__(self):
+#         return ("{}, {}, {}".format(self.opis, self.znesek, self.smer))
 

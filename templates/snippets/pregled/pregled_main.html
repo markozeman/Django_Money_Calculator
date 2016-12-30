@@ -1,21 +1,21 @@
 {% block content %}
     <section class="main col-12">
-        <div class="dropdown">
-            <select onchange="showGoal_2(this)" id="pregled_select">
-                <option value="wallet"> Denarnica </option>
-                <option value="bank"> Banka </option>
-                <option value="goals"> Cilji </option>
-            </select>
-        </div>
-
         <div class="not_goal_results col-12">
-            <form method="get" onsubmit="return get_data()" id="pregled_form">
+            <form method="post" id="pregled_form" action="{% url 'iskanje' %}">
                 {% csrf_token %}
+
+                <div class="dropdown">
+                    <select onchange="change_pregled_dropdown(this)" name="select_opcija" id="pregled_select" style="margin: 20px">
+                        <option value="wallet"> Denarnica </option>
+                        <option value="bank"> Banka </option>
+                        <option value="goals"> Cilji </option>
+                    </select>
+                </div>
+
                 <div class="choose_option col-3">
-                    <select>
+                    <select name="kategorija">
                         <option value="vsi_izdatki"> Vsi izdatki </option>
-                        <option value="vsi_izdatki"> Vsi prejemki </option>
-                        <option value="vse_transakcije"> Vse transakcije </option>
+                        <option value="vsi_prejemki"> Vsi prejemki </option>
                         <option value="hrana"> Hrana </option>
                         <option value="oblacila"> Oblačila, obutev </option>
                         <option value="tehnika"> Tehnika </option>
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="choose_period col-3">
-                    <select>
+                    <select name="obdobje">
                         <option value="teden"> Zadnji teden </option>
                         <option value="mesec"> Zadnji mesec </option>
                         <option value="leto"> Zadnje leto </option>
@@ -49,14 +49,30 @@
         </div>
 
         <div class="result_set col-12">
-            <p> Rezultati iskanja... </p>
-            <!-- izdelek, vrednost, datum -->
-            <!-- za banko --- polog ali dvig, vrednost, datum -->
-        </div>
-
-        <div class="goal_results col-12" style="display: none;">
-            <p> Prikazani cilji in njihovo stanje... </p>
-            <!-- prikaže vse cilje in njihovo stanje (mogoče progress bar) -->
+            {% if izdatki %}
+                <p style="margin-left: 40px; color: #B90000; font-weight: bold; font-style: italic;"> Izdatki: </p>
+                <ul>
+                    {% for izdatek in izdatki %}
+                        {% include "snippets/izdatek.html" %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% if prejemki %}
+                <p style="margin-left: 40px; color: #80ff80; font-weight: bold; font-style: italic;"> Prejemki: </p>
+                <ul>
+                    {% for prejemek in prejemki %}
+                        {% include 'snippets/prejemek.html' %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% if cilji %}
+                <p style="margin-left: 40px; color: #0000B9; font-weight: bold; font-style: italic;"> Cilji: </p>
+                <ul>
+                    {% for cilj in cilji %}
+                        {% include 'snippets/cilj.html' %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
     </section>
 {% endblock %}

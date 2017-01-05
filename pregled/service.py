@@ -53,10 +53,13 @@ def search(request):
     elif (kategorija == "vsi_prejemki"):
         prejemki = list(stanje.izdatekprejemek_set.filter(tip='prejemek'))
 
-        for i in range(len(prejemki)):
+        i = 0
+        while (i < len(prejemki)):
             if ((danes - make_naive(prejemki[i].datum)).days > stevilo_dni):
                 prejemki.pop(i)
                 i -= 1
+
+            i += 1
 
         context['prejemki'] = prejemki
 

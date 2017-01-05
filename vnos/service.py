@@ -1,5 +1,4 @@
 
-
 def add_data(request):
     dropdown = request.POST['dropdown']
     opis = request.POST['opis']

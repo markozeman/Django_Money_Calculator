@@ -272,3 +272,8 @@ input[type='checkbox']:checked {
 #izdatki_canvas, #prejemki_canvas {
     width: 100%;
 }
+
+
+.canvasjs-chart-container {
+    position: absolute !important;
+}

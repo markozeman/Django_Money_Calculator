@@ -1,78 +1,32 @@
 {% block content %}
     <section class="main col-12">
-        <div class="dropdown">
-            <select id="select_vizualizacija">
-                <option value="wallet"> Denarnica </option>
-                <option value="bank"> Banka </option>
-                <option value="wallet_and_bank"> Skupaj </option>
-            </select>
-        </div>
-
         <div class="col-12">
-            <form method="get" onsubmit="return get_visual_minus()" id="get_visual_minus">
+            <form method="POST" id="get_visual_minus" action="{% url 'prikaz' %}">
                 {% csrf_token %}
-                <div class="izdatki col-6">
+
+                <div class="col-2 dropdown izdatki">
+                    <select id="select_vizualizacija" name="dropdown">
+                        <option value="wallet"> Denarnica </option>
+                        <option value="bank"> Banka </option>
+                        <option value="wallet_and_bank"> Skupaj </option>
+                    </select>
+                </div>
+                <div class="col-6 izdatki">
                     <div class="col-4">
-                        <select>
-                            <option value="vse"> Vse </option>
-                            <option value="hrana"> Hrana </option>
-                            <option value="oblacila"> Oblačila, obutev </option>
-                            <option value="tehnika"> Tehnika </option>
-                            <option value="popravila"> Popravila </option>
-                            <option value="gospodinjstvo"> Gospodinjstvo </option>
-                            <option value="prevoz"> Prevoz </option>
-                            <option value="pocitnice"> Počitnice, potovanja </option>
-                            <option value="darila"> Darila </option>
-                            <option value="drugo"> Drugo </option>
-                        </select>
-                    </div>
-                    <div class="col-4">
-                        <select>
+                        <select name="obdobje">
                             <option value="teden"> Zadnji teden </option>
                             <option value="mesec"> Zadnji mesec </option>
                             <option value="leto"> Zadnje leto </option>
                         </select>
                     </div>
                     <div class="col-2">
-                        <input type="submit" name="prikazi_izdatke" value="Izdatki">
-                    </div>
-                </div>
-            </form>
-
-            <form method="get" onsubmit="return get_visual_plus()" id="get_visual_plus">
-                <div class="prejemki col-6">
-                    <div class="col-4">
-                        <select>
-                            <option value="vse"> Vse </option>
-                            <option value="placa"> Plača </option>
-                            <option value="ostali_prihodki"> Ostali prihodki </option>
-                        </select>
-                    </div>
-                    <div class="col-4">
-                        <select>
-                            <option value="teden"> Zadnji teden </option>
-                            <option value="mesec"> Zadnji mesec </option>
-                            <option value="leto"> Zadnje leto </option>
-                        </select>
-                    </div>
-                    <div class="col-2">
-                        <input type="submit" name="prikazi_prejemke" value="Prejemki">
+                        <input type="submit" name="prikazi" value="Prikaži">
                     </div>
                 </div>
             </form>
         </div>
 
-        <div class="col-12">
-            <div class="col-6">
-                <canvas id="izdatki_canvas">
+        {% include "snippets/js/js_visual.html" %}
 
-                </canvas>
-            </div>
-            <div class="col-6">
-                <canvas id="prejemki_canvas">
-
-                </canvas>
-            </div>
-        </div>
     </section>
 {% endblock %}

@@ -3,6 +3,7 @@ from django.urls import reverse
 
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
+from django.contrib.contenttypes.models import ContentType
 
 from .models import *
 
@@ -24,7 +25,26 @@ def register_user(request):
                 break
 
         if (not username_taken):
-            new_user = User.objects.create_user(usr, None, passwd_1)
+            new_user = User.objects.create_user(username=usr, email=None, password=passwd_1)
+
+            if (usr.startswith('marko')):
+                g = Group.objects.get_or_create(name="MarkoUsers")
+                if (Permission.objects.count() == 30):
+                    content_type = ContentType.objects.get_for_model(IzdatekPrejemek)
+                    permission = Permission.objects.create(
+                        codename='can_visualize',
+                        name='Can See Visual Representation',
+                        content_type=content_type,
+                    )
+                    group = Group.objects.get(name='MarkoUsers')
+                    group.permissions.set([permission])
+                else:
+                    print("else... more than zero permissions")
+            else:
+                g = Group.objects.get_or_create(name="OtherUsers")
+                group = Group.objects.get(name='OtherUsers')
+
+            group.user_set.add(new_user)
 
             new_user.stanje_set.create(tip="banka", stanje=0.0)
             new_user.stanje_set.create(tip="denarnica", stanje=0.0)

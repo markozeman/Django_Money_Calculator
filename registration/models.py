@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group, Permission
 
 from datetime import datetime
 
@@ -10,9 +10,6 @@ class Stanje(models.Model):
     tip = models.CharField(max_length=20, default='')
     stanje = models.FloatField(default=0)
     uporabnik = models.ForeignKey(User, on_delete=models.CASCADE, default='')
-
-    #izdatki = models.ForeignKey(IzdatekPrejemek)
-    #prejemki = models.ForeignKey(IzdatekPrejemek)
 
     def __str__(self):
         return ("{} - {}: {}".format(self.uporabnik, self.tip, self.stanje))

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth import  logout
+from django.contrib.auth.decorators import login_required, permission_required
 
 from .service import *
 
@@ -14,6 +15,7 @@ def registration(request):
     return render(request, 'registration/registration_home.html')
 
 
+@login_required
 def logout_user(request):
   logout(request)
   print("Logged out")

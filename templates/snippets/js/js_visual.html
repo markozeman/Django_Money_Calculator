@@ -1,46 +1,61 @@
 {% block content %}
 
-    <div id="chartContainer" style="width: 1500px; height: 700px; margin: 100px;">
+    <div id="chartContainer" style="width: 1400px; height: 700px; margin: 100px;">
     </div>
 
     <script type="text/javascript">
-        var visual_data = {{ json_data|safe }};
-        console.log(visual_data);
+        var json_data = {{ json_data|safe }};
 
-        for (var key in visual_data) {
-            var value = visual_data[key];
-            var datum = new Date (value[0]);
-            console.log(datum);
+        var stevilo_dni = json_data["stevilo_dni"];
+        var b_d = json_data["banka_denarnica"];
+        if (b_d == "wallet") {
+            b_d = "denarnici";
+        }
+        else if (b_d == "bank") {
+            b_d = "banki";
+        }
+        else if (b_d == "wallet_and_bank") {
+            b_d = "skupaj v denarnici in banki";
         }
 
-        draw(visual_data);
+        var days = [];
+        for (var key in json_data) {
+            if (key != "stevilo_dni" && key != "banka_denarnica") {
+                //var value = json_data[key];
+                //var datum = new Date (value[0]);
+                days.push(parseInt(key));
+            }
+        }
+        days.sort(function(a, b){return a-b});
 
-        function draw(visual_data) {
+        var visual_data = [];
+        visual_data.push({x: 0, y: 0});
+        for (var i=0; i<stevilo_dni; i++) {
+            if (days.length > 0 && i == days[0]) {
+                visual_data.push({x: i, y: json_data[days[0]][1]});
+                days.splice(0, 1);
+            }
+            else {
+                visual_data.push({x: i, y: visual_data[visual_data.length-1]['y']});
+            }
+        }
+
+        var s = "Prikaz stanja v " + b_d + " za obdobje zadnjih " + stevilo_dni + " dni";
+        draw(visual_data, s);
+
+        function draw(visual_data, title_text) {
             var chart = new CanvasJS.Chart("chartContainer",
             {
-
-              title:{
-              text: "Earthquakes - per month"
+              title: {
+                  text: title_text,
+                  fontSize: 30
               },
-               data: [
-              {
-                type: "line",
 
-                dataPoints: [
-                { x: new Date(2012, 00, 1), y: 450 },
-                { x: new Date(2012, 01, 1), y: 414 },
-                { x: new Date(2012, 02, 1), y: 520 },
-                { x: new Date(2012, 03, 1), y: 460 },
-                { x: new Date(2012, 04, 1), y: 450 },
-                { x: new Date(2012, 05, 1), y: 500 },
-                { x: new Date(2012, 06, 1), y: 480 },
-                { x: new Date(2012, 07, 1), y: 480 },
-                { x: new Date(2012, 08, 1), y: 410 },
-                { x: new Date(2012, 09, 1), y: 500 },
-                { x: new Date(2012, 10, 1), y: 480 },
-                { x: new Date(2012, 11, 1), y: 510 }
-                ]
-              }
+              data: [
+                  {
+                    type: "line",
+                    dataPoints: visual_data
+                  }
               ]
             });
 

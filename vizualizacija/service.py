@@ -12,7 +12,7 @@ def show_visual(request):
     if (obdobje == "teden"):
         stevilo_dni = 7
     elif (obdobje == "mesec"):
-        stevilo_dni = 30
+        stevilo_dni = 31
     elif (obdobje == "leto"):
         stevilo_dni = 365
 
@@ -65,15 +65,15 @@ def show_visual(request):
 
     if (dropdown == "wallet"):
         stanja_denarnica = procces_list(stanja_denarnica)
-        json_data = prepare_visual_data(danes, stevilo_dni, stanja_denarnica)
+        json_data = prepare_visual_data(danes, stevilo_dni, stanja_denarnica, dropdown)
         print(stanja_denarnica)
     elif (dropdown == "bank"):
         stanja_banka = procces_list(stanja_banka)
-        json_data = prepare_visual_data(danes, stevilo_dni, stanja_banka)
+        json_data = prepare_visual_data(danes, stevilo_dni, stanja_banka, dropdown)
         print(stanja_banka)
     elif (dropdown == "wallet_and_bank"):
         stanja_skupaj = procces_list(stanja_skupaj)
-        json_data = prepare_visual_data(danes, stevilo_dni, stanja_skupaj)
+        json_data = prepare_visual_data(danes, stevilo_dni, stanja_skupaj, dropdown)
         print(stanja_skupaj)
 
     return json_data
@@ -96,12 +96,15 @@ def procces_list(data):
     return podatki
 
 
-def prepare_visual_data(danes, stevilo_dni, data):
+def prepare_visual_data(danes, stevilo_dni, data, dropdown):
     date_data = {}
 
     for item in data:
         dan = str(stevilo_dni - (danes - item[1]).days)
         date_data[dan] = [str(item[1]), item[0]]
+
+    date_data["stevilo_dni"] = stevilo_dni
+    date_data["banka_denarnica"] = dropdown
 
     json_data = json.dumps(date_data, ensure_ascii=False)
     return json_data

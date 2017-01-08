@@ -1,0 +1,70 @@
+BEGIN;
+--
+-- Create model Cilj
+--
+CREATE TABLE "registration_cilj" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "opis" varchar(150) NOT NULL, "vrednost" real NOT NULL, "trenutno_privarcevano" real NOT NULL, "od_datuma" datetime NOT NULL, "do_datuma" datetime NOT NULL);
+--
+-- Create model IzdatekPrejemek
+--
+CREATE TABLE "registration_izdatekprejemek" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "tip" varchar(20) NOT NULL, "opis" varchar(100) NOT NULL, "znesek" real NOT NULL, "kategorija" varchar(30) NOT NULL, "datum" datetime NOT NULL, "banka_denarnica" varchar(20) NOT NULL);
+--
+-- Create model Stanje
+--
+CREATE TABLE "registration_stanje" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "tip" varchar(20) NOT NULL, "stanje" real NOT NULL);
+--
+-- Create model Transakcija
+--
+CREATE TABLE "registration_transakcija" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "opis" varchar(100) NOT NULL, "znesek" real NOT NULL, "smer" varchar(20) NOT NULL);
+--
+-- Create model Uporabnik
+--
+CREATE TABLE "registration_uporabnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "uporabnik_id" integer NOT NULL UNIQUE REFERENCES "auth_user" ("id"));
+--
+-- Add field uporabnik to transakcija
+--
+ALTER TABLE "registration_transakcija" RENAME TO "registration_transakcija__old";
+CREATE TABLE "registration_transakcija" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "opis" varchar(100) NOT NULL, "znesek" real NOT NULL, "smer" varchar(20) NOT NULL, "uporabnik_id" integer NOT NULL REFERENCES "registration_uporabnik" ("id"));
+INSERT INTO "registration_transakcija" ("opis", "smer", "znesek", "id", "uporabnik_id") SELECT "opis", "smer", "znesek", "id", NULL FROM "registration_transakcija__old";
+DROP TABLE "registration_transakcija__old";
+CREATE INDEX "registration_transakcija_f9585d13" ON "registration_transakcija" ("uporabnik_id");
+--
+-- Add field uporabnik to stanje
+--
+ALTER TABLE "registration_stanje" RENAME TO "registration_stanje__old";
+CREATE TABLE "registration_stanje" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "tip" varchar(20) NOT NULL, "stanje" real NOT NULL, "uporabnik_id" integer NOT NULL REFERENCES "registration_uporabnik" ("id"));
+INSERT INTO "registration_stanje" ("uporabnik_id", "stanje", "id", "tip") SELECT NULL, "stanje", "id", "tip" FROM "registration_stanje__old";
+DROP TABLE "registration_stanje__old";
+CREATE INDEX "registration_stanje_f9585d13" ON "registration_stanje" ("uporabnik_id");
+--
+-- Add field stanje to izdatekprejemek
+--
+ALTER TABLE "registration_izdatekprejemek" RENAME TO "registration_izdatekprejemek__old";
+CREATE TABLE "registration_izdatekprejemek" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "tip" varchar(20) NOT NULL, "opis" varchar(100) NOT NULL, "znesek" real NOT NULL, "kategorija" varchar(30) NOT NULL, "datum" datetime NOT NULL, "banka_denarnica" varchar(20) NOT NULL, "stanje_id" integer NOT NULL REFERENCES "registration_stanje" ("id"));
+INSERT INTO "registration_izdatekprejemek" ("opis", "stanje_id", "znesek", "tip", "datum", "banka_denarnica", "kategorija", "id") SELECT "opis", NULL, "znesek", "tip", "datum", "banka_denarnica", "kategorija", "id" FROM "registration_izdatekprejemek__old";
+DROP TABLE "registration_izdatekprejemek__old";
+CREATE INDEX "registration_izdatekprejemek_9792f275" ON "registration_izdatekprejemek" ("stanje_id");
+--
+-- Add field uporabnik to cilj
+--
+ALTER TABLE "registration_cilj" RENAME TO "registration_cilj__old";
+CREATE TABLE "registration_cilj" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "opis" varchar(150) NOT NULL, "vrednost" real NOT NULL, "trenutno_privarcevano" real NOT NULL, "od_datuma" datetime NOT NULL, "do_datuma" datetime NOT NULL, "uporabnik_id" integer NOT NULL REFERENCES "registration_uporabnik" ("id"));
+INSERT INTO "registration_cilj" ("vrednost", "opis", "od_datuma", "do_datuma", "uporabnik_id", "id", "trenutno_privarcevano") SELECT "vrednost", "opis", "od_datuma", "do_datuma", NULL, "id", "trenutno_privarcevano" FROM "registration_cilj__old";
+DROP TABLE "registration_cilj__old";
+CREATE INDEX "registration_cilj_f9585d13" ON "registration_cilj" ("uporabnik_id");
+COMMIT;
+
+
+
+BEGIN;
+--
+-- Remove field uporabnik from transakcija
+--
+ALTER TABLE "registration_transakcija" RENAME TO "registration_transakcija__old";
+CREATE TABLE "registration_transakcija" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "opis" varchar(100) NOT NULL, "znesek" real NOT NULL, "smer" varchar(20) NOT NULL);
+INSERT INTO "registration_transakcija" ("id", "znesek", "smer", "opis") SELECT "id", "znesek", "smer", "opis" FROM "registration_transakcija__old";
+DROP TABLE "registration_transakcija__old";
+--
+-- Delete model Transakcija
+--
+DROP TABLE "registration_transakcija";
+COMMIT;

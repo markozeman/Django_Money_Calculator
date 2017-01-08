@@ -40,10 +40,14 @@ def search(request):
     if (kategorija == "vsi_izdatki"):
         izdatki = list(stanje.izdatekprejemek_set.filter(tip='izdatek'))
 
-        for i in range(len(izdatki)):
-            if ((danes - make_naive(izdatki[i].datum)).days > stevilo_dni):
-                izdatki.pop(i)
-                i -= 1
+        if (len(izdatki) > 0):
+            i = 0
+            while (i < len(izdatki)):
+                if ((danes - make_naive(izdatki[i].datum)).days > stevilo_dni):
+                    izdatki.pop(i)
+                    i -= 1
+
+                i += 1
 
         context['izdatki'] = izdatki
 
@@ -53,13 +57,14 @@ def search(request):
     elif (kategorija == "vsi_prejemki"):
         prejemki = list(stanje.izdatekprejemek_set.filter(tip='prejemek'))
 
-        i = 0
-        while (i < len(prejemki)):
-            if ((danes - make_naive(prejemki[i].datum)).days > stevilo_dni):
-                prejemki.pop(i)
-                i -= 1
+        if (len(prejemki) > 0):
+            i = 0
+            while (i < len(prejemki)):
+                if ((danes - make_naive(prejemki[i].datum)).days > stevilo_dni):
+                    prejemki.pop(i)
+                    i -= 1
 
-            i += 1
+                i += 1
 
         context['prejemki'] = prejemki
 

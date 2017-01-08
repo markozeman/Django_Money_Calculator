@@ -12,7 +12,7 @@ class Stanje(models.Model):
     uporabnik = models.ForeignKey(User, on_delete=models.CASCADE, default='')
 
     def __str__(self):
-        return ("{} - {}: {}".format(self.uporabnik, self.tip, self.stanje))
+        return ("{} - {}: {}".format(self.uporabnik.username, self.tip, self.stanje))
 
     def is_negative(self):
         return  self.stanje < 0

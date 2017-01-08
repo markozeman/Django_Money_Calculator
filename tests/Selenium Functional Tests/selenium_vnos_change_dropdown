@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://127.0.0.1:8000/" />
+<title>selenium_vnos_change_dropdown</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">selenium_vnos_change_dropdown</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/vnos.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=nov_vnos</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=dropdown</td>
+	<td>label=Denarnica</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//form[@id='add_data']/div[3]</td>
+	<td>Znesek v €:*</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=dropdown</td>
+	<td>label=Banka</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//form[@id='add_data']/div[3]</td>
+	<td>Znesek v €:*</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=dropdown</td>
+	<td>label=Nov cilj</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//form[@id='add_goal']/div[2]</td>
+	<td>Vrednost v €:*</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=dropdown</td>
+	<td>label=Privarčuj za cilj</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#add_to_goal &gt; div.col-4</td>
+	<td>Vrednost v €:*</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

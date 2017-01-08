@@ -1,9 +1,9 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.utils import timezone
 from django.contrib.auth.models import User, Group, Permission
-
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 class Stanje(models.Model):
@@ -13,6 +13,9 @@ class Stanje(models.Model):
 
     def __str__(self):
         return ("{} - {}: {}".format(self.uporabnik, self.tip, self.stanje))
+
+    def is_negative(self):
+        return  self.stanje < 0
 
 
 class IzdatekPrejemek(models.Model):
@@ -38,3 +41,9 @@ class Cilj(models.Model):
 
     def __str__(self):
         return ("{}, {}/{}, {}-{}".format(self.opis, self.trenutno_privarcevano, self.vrednost, self.od_datuma, self.do_datuma))
+
+    def is_close_to_end(self):
+        return timezone.now() + timedelta(days=7) >=  self.do_datuma
+
+    def is_accomplished(self):
+        return self.trenutno_privarcevano >= self.vrednost

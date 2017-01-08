@@ -1,6 +1,13 @@
 {% block content %}
     <li>
         Opis: <b>{{ cilj.opis }}</b> <br> Status varčevanja: <b>{{ cilj.trenutno_privarcevano }} / {{ cilj.vrednost}}</b> <br> Časovnica: <b>{{ cilj.od_datuma }} - {{ cilj.do_datuma}}</b> <br>
+        {% if cilj.is_accomplished %}
+            <p style="color: greenyellow"> &#10004;  &#10004;  &#10004; </p>
+        {% else %}
+            {% if cilj.is_close_to_end %}
+                <p style="color: darkred"> Do končnega datuma je manj kot teden dni ali cilj je potekel ! </p>
+            {% endif %}
+        {% endif %}
     </li>
     <br>
 {% endblock %}

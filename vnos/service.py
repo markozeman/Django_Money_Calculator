@@ -52,3 +52,12 @@ def add_to_goal(request):
     izbrani_cilj.save()
 
 
+'''
+import requests
+
+req = requests.Request('POST','http://127.0.0.1:8000/vnos.html',headers={'X-Custom':'Test'},data='dropdown=wallet&opis=test_request&znesek=10&kategorija=hrana&plus=Dodaj')
+prepared = req.prepare()
+
+s = requests.Session()
+s.send(prepared)
+'''

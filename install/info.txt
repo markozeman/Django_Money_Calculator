@@ -1,0 +1,8 @@
+Zahtevano programsko orodje:
+- Python 3
+- Django Web Framework
+
+- zagon SQL ukazov iz datoteke sqlmigrate
+
+- aplikacijo lahko postavimo na lokalni strežnik z ukazom 'python manage.py runserver'
+- po tem bo dostopna na naslovu http://127.0.0.1:8000/

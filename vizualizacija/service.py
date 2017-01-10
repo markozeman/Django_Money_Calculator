@@ -1,6 +1,10 @@
-import datetime
 import json
 from django.utils.timezone import make_naive
+
+import logging
+import datetime
+
+logger = logging.getLogger('my_logger')
 
 
 def show_visual(request):
@@ -75,6 +79,9 @@ def show_visual(request):
         stanja_skupaj = procces_list(stanja_skupaj)
         json_data = prepare_visual_data(danes, stevilo_dni, stanja_skupaj, dropdown)
         print(stanja_skupaj)
+
+    s = 'Visualization was made for ' + dropdown + " for last " + str(stevilo_dni) + " days.\n"
+    logger.debug(datetime.datetime.now().strftime("%B %d, %Y - %I:%M%p") + ' -- ' + str(request.user) + ' -- ' + s)
 
     return json_data
 

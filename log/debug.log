@@ -1,0 +1,587 @@
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 3034
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'markoz'; args=('markoz',)
+"POST / HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 3034
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'markoz'; args=('markoz',)
+"POST / HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 3354
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'markoz'; args=('markoz',)
+(0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'cmq5sry42biib2p3cfjmsaq7gy5o8ueh' LIMIT 1; args=('cmq5sry42biib2p3cfjmsaq7gy5o8ueh',)
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'cmq5sry42biib2p3cfjmsaq7gy5o8ueh', 'ZjM4NDEyMjExYWRhZGQxYjZhMWY2MzU1MWMzNmI3NDBhNGYwMTA5Mzp7fQ==', '2017-01-24 17:23:24.159009'; args=('cmq5sry42biib2p3cfjmsaq7gy5o8ueh', 'ZjM4NDEyMjExYWRhZGQxYjZhMWY2MzU1MWMzNmI3NDBhNGYwMTA5Mzp7fQ==', '2017-01-24 17:23:24.159009')
+(0.000) BEGIN; args=None
+(0.000) UPDATE "auth_user" SET "last_login" = '2017-01-10 17:23:24.169395' WHERE "auth_user"."id" = 30; args=('2017-01-10 17:23:24.169395', 30)
+(0.000) BEGIN; args=None
+(0.000) UPDATE "django_session" SET "session_data" = 'MDA1M2IxMDg3MjU1MjYwZGE5MWIwNWRlOWE5MzZlMGU2OTFjMzlhZjp7Il9hdXRoX3VzZXJfaWQiOiIzMCIsIl9hdXRoX3VzZXJfaGFzaCI6ImFiYTlkNWNlZGJhYjk4MDA0Y2IwZTFlODA2MjRhZmFhMGM0NjliMjYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCJ9', "expire_date" = '2017-01-24 17:23:24.184980' WHERE "django_session"."session_key" = 'cmq5sry42biib2p3cfjmsaq7gy5o8ueh'; args=('MDA1M2IxMDg3MjU1MjYwZGE5MWIwNWRlOWE5MzZlMGU2OTFjMzlhZjp7Il9hdXRoX3VzZXJfaWQiOiIzMCIsIl9hdXRoX3VzZXJfaGFzaCI6ImFiYTlkNWNlZGJhYjk4MDA0Y2IwZTFlODA2MjRhZmFhMGM0NjliMjYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCJ9', '2017-01-24 17:23:24.184980', 'cmq5sry42biib2p3cfjmsaq7gy5o8ueh')
+"POST / HTTP/1.1" 302 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:23:24.197913' AND "django_session"."session_key" = 'cmq5sry42biib2p3cfjmsaq7gy5o8ueh'); args=('2017-01-10 17:23:24.197913', 'cmq5sry42biib2p3cfjmsaq7gy5o8ueh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "registration_cilj"."id", "registration_cilj"."opis", "registration_cilj"."vrednost", "registration_cilj"."trenutno_privarcevano", "registration_cilj"."od_datuma", "registration_cilj"."do_datuma", "registration_cilj"."uporabnik_id" FROM "registration_cilj" WHERE "registration_cilj"."uporabnik_id" = 30; args=(30,)
+"GET /vnos.html HTTP/1.1" 200 7360
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'cmq5sry42biib2p3cfjmsaq7gy5o8ueh' AND "django_session"."expire_date" > '2017-01-10 17:30:11.050207'); args=('cmq5sry42biib2p3cfjmsaq7gy5o8ueh', '2017-01-10 17:30:11.050207')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+Exception while resolving variable 'izdatki' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [izdatki] in '[{\'True\': True, \'None\': None, \'False\': False}, {\'csrf_token\': <SimpleLazyObject: \'cONtXUnzpze1jqg2JBqT84Gxogg8KYaqP1RovjlkN6v9pyQa2OMnJgFUeffwR6dB\'>, \'request\': <WSGIRequest: GET \'/pregled.html\'>, \'user\': <SimpleLazyObject: <User: markoz>>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fdc5d56aa20>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fdc5dfe0c50>, \'DEFAULT_MESSAGE_LEVELS\': {\'SUCCESS\': 25, \'INFO\': 20, \'ERROR\': 40, \'WARNING\': 30, \'DEBUG\': 10}}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    <section class="main\'>, <django.template.defaulttags.URLNode object at 0x7fdc5df90b70>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fdc5df90b00>, <TextNode: \'\\n\\n                <div cl\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+Exception while resolving variable 'prejemki' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [prejemki] in '[{\'True\': True, \'None\': None, \'False\': False}, {\'csrf_token\': <SimpleLazyObject: \'cONtXUnzpze1jqg2JBqT84Gxogg8KYaqP1RovjlkN6v9pyQa2OMnJgFUeffwR6dB\'>, \'request\': <WSGIRequest: GET \'/pregled.html\'>, \'user\': <SimpleLazyObject: <User: markoz>>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fdc5d56aa20>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fdc5dfe0c50>, \'DEFAULT_MESSAGE_LEVELS\': {\'SUCCESS\': 25, \'INFO\': 20, \'ERROR\': 40, \'WARNING\': 30, \'DEBUG\': 10}}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    <section class="main\'>, <django.template.defaulttags.URLNode object at 0x7fdc5df90b70>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fdc5df90b00>, <TextNode: \'\\n\\n                <div cl\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+Exception while resolving variable 'cilji' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [cilji] in '[{\'True\': True, \'None\': None, \'False\': False}, {\'csrf_token\': <SimpleLazyObject: \'cONtXUnzpze1jqg2JBqT84Gxogg8KYaqP1RovjlkN6v9pyQa2OMnJgFUeffwR6dB\'>, \'request\': <WSGIRequest: GET \'/pregled.html\'>, \'user\': <SimpleLazyObject: <User: markoz>>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fdc5d56aa20>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fdc5dfe0c50>, \'DEFAULT_MESSAGE_LEVELS\': {\'SUCCESS\': 25, \'INFO\': 20, \'ERROR\': 40, \'WARNING\': 30, \'DEBUG\': 10}}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    <section class="main\'>, <django.template.defaulttags.URLNode object at 0x7fdc5df90b70>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fdc5df90b00>, <TextNode: \'\\n\\n                <div cl\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+"GET /pregled.html HTTP/1.1" 200 4703
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'cmq5sry42biib2p3cfjmsaq7gy5o8ueh' AND "django_session"."expire_date" > '2017-01-10 17:30:12.417864'); args=('cmq5sry42biib2p3cfjmsaq7gy5o8ueh', '2017-01-10 17:30:12.417864')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "registration_stanje"."id", "registration_stanje"."tip", "registration_stanje"."stanje", "registration_stanje"."uporabnik_id" FROM "registration_stanje" WHERE ("registration_stanje"."uporabnik_id" = 30 AND "registration_stanje"."tip" = 'denarnica') LIMIT 1; args=(30, 'denarnica')
+(0.000) SELECT "registration_izdatekprejemek"."id", "registration_izdatekprejemek"."tip", "registration_izdatekprejemek"."opis", "registration_izdatekprejemek"."znesek", "registration_izdatekprejemek"."kategorija", "registration_izdatekprejemek"."datum", "registration_izdatekprejemek"."banka_denarnica", "registration_izdatekprejemek"."stanje_id" FROM "registration_izdatekprejemek" WHERE ("registration_izdatekprejemek"."stanje_id" = 19 AND "registration_izdatekprejemek"."tip" = 'izdatek'); args=(19, 'izdatek')
+Internal Server Error: /pregled.html/isci
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/markozeman/Desktop/FRI/3. letnik/SP/Django_Money_Calculator/pregled/views.py", line 14, in iskanje
+    context = search(request)
+  File "/home/markozeman/Desktop/FRI/3. letnik/SP/Django_Money_Calculator/pregled/service.py", line 90, in search
+    s = 'Search in ' + select_opcija + " for last " + stevilo_dni + " for category " + kategorija + ".\n"
+TypeError: Can't convert 'int' object to str implicitly
+"POST /pregled.html/isci HTTP/1.1" 500 82634
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'cmq5sry42biib2p3cfjmsaq7gy5o8ueh' AND "django_session"."expire_date" > '2017-01-10 17:30:45.876087'); args=('cmq5sry42biib2p3cfjmsaq7gy5o8ueh', '2017-01-10 17:30:45.876087')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "registration_stanje"."id", "registration_stanje"."tip", "registration_stanje"."stanje", "registration_stanje"."uporabnik_id" FROM "registration_stanje" WHERE ("registration_stanje"."uporabnik_id" = 30 AND "registration_stanje"."tip" = 'denarnica') LIMIT 1; args=(30, 'denarnica')
+(0.000) SELECT "registration_izdatekprejemek"."id", "registration_izdatekprejemek"."tip", "registration_izdatekprejemek"."opis", "registration_izdatekprejemek"."znesek", "registration_izdatekprejemek"."kategorija", "registration_izdatekprejemek"."datum", "registration_izdatekprejemek"."banka_denarnica", "registration_izdatekprejemek"."stanje_id" FROM "registration_izdatekprejemek" WHERE ("registration_izdatekprejemek"."stanje_id" = 19 AND "registration_izdatekprejemek"."tip" = 'izdatek'); args=(19, 'izdatek')
+"POST /pregled.html/isci HTTP/1.1" 200 5110
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'cmq5sry42biib2p3cfjmsaq7gy5o8ueh' AND "django_session"."expire_date" > '2017-01-10 17:31:46.426234'); args=('cmq5sry42biib2p3cfjmsaq7gy5o8ueh', '2017-01-10 17:31:46.426234')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+Exception while resolving variable 'json_data' in template 'vizualizacija/vizualizacija_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [json_data] in '[{\'None\': None, \'True\': True, \'False\': False}, {\'csrf_token\': <SimpleLazyObject: \'9lwe5s6junEPSzd84JTnwsXYOZFCtwLIMyA9DR44SUVXYHNgnWfR7EWlEYE0AEOT\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f5c2074ae48>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f5c211934a8>, \'request\': <WSGIRequest: GET \'/vizualizacija.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'SUCCESS\': 25, \'ERROR\': 40, \'INFO\': 20, \'DEBUG\': 10, \'WARNING\': 30}, \'user\': <SimpleLazyObject: <User: markoz>>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    <section class="main\'>, <django.template.defaulttags.URLNode object at 0x7f5c211a8208>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f5c211a8cf8>, <TextNode: \'\\n\\n                <div cl\'>, <django.template.loader_tags.IncludeNode object at 0x7f5c211a82b0>, <TextNode: \'\\n\\n    </section>\\n\'>]>}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n\\n    <div id="chartConta\'>, <Variable Node: json_data|safe>, <TextNode: \';\\n\\n        var stevilo_dn\'>]>}]'
+"GET /vizualizacija.html HTTP/1.1" 200 5275
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:34:08.387060' AND "django_session"."session_key" = 'cmq5sry42biib2p3cfjmsaq7gy5o8ueh'); args=('2017-01-10 17:34:08.387060', 'cmq5sry42biib2p3cfjmsaq7gy5o8ueh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'cmq5sry42biib2p3cfjmsaq7gy5o8ueh'; args=('cmq5sry42biib2p3cfjmsaq7gy5o8ueh',)
+(0.000) BEGIN; args=None
+(0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('cmq5sry42biib2p3cfjmsaq7gy5o8ueh'); args=('cmq5sry42biib2p3cfjmsaq7gy5o8ueh',)
+"GET /logout HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 3034
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'markozeman'; args=('markozeman',)
+(0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr' LIMIT 1; args=('61bf2mwb7fnyfl8g5lsj2k9vr6otttlr',)
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr', 'ZjM4NDEyMjExYWRhZGQxYjZhMWY2MzU1MWMzNmI3NDBhNGYwMTA5Mzp7fQ==', '2017-01-24 17:34:14.336577'; args=('61bf2mwb7fnyfl8g5lsj2k9vr6otttlr', 'ZjM4NDEyMjExYWRhZGQxYjZhMWY2MzU1MWMzNmI3NDBhNGYwMTA5Mzp7fQ==', '2017-01-24 17:34:14.336577')
+(0.000) BEGIN; args=None
+(0.000) UPDATE "auth_user" SET "last_login" = '2017-01-10 17:34:14.346877' WHERE "auth_user"."id" = 8; args=('2017-01-10 17:34:14.346877', 8)
+(0.000) BEGIN; args=None
+(0.001) UPDATE "django_session" SET "session_data" = 'OThhODA4NjA0YmFkNmYyMjE5N2E0NGQwOWQ4YjA2OGQyZjI0OTI5MTp7Il9hdXRoX3VzZXJfaWQiOiI4IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIxOGZhZjI3MmUzNjQ2NjljOTU1MjU5M2QzODQ4YzcwZTcyM2M5OTc2In0=', "expire_date" = '2017-01-24 17:34:14.356687' WHERE "django_session"."session_key" = '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr'; args=('OThhODA4NjA0YmFkNmYyMjE5N2E0NGQwOWQ4YjA2OGQyZjI0OTI5MTp7Il9hdXRoX3VzZXJfaWQiOiI4IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIxOGZhZjI3MmUzNjQ2NjljOTU1MjU5M2QzODQ4YzcwZTcyM2M5OTc2In0=', '2017-01-24 17:34:14.356687', '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr')
+"POST / HTTP/1.1" 302 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:34:14.371440' AND "django_session"."session_key" = '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr'); args=('2017-01-10 17:34:14.371440', '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+(0.000) SELECT "registration_cilj"."id", "registration_cilj"."opis", "registration_cilj"."vrednost", "registration_cilj"."trenutno_privarcevano", "registration_cilj"."od_datuma", "registration_cilj"."do_datuma", "registration_cilj"."uporabnik_id" FROM "registration_cilj" WHERE "registration_cilj"."uporabnik_id" = 8; args=(8,)
+"GET /vnos.html HTTP/1.1" 200 7894
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:34:36.338974' AND "django_session"."session_key" = '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr'); args=('2017-01-10 17:34:36.338974', '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+(0.000) SELECT "registration_stanje"."id", "registration_stanje"."tip", "registration_stanje"."stanje", "registration_stanje"."uporabnik_id" FROM "registration_stanje" WHERE ("registration_stanje"."uporabnik_id" = 8 AND "registration_stanje"."tip" = 'banka') LIMIT 1; args=(8, 'banka')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "registration_izdatekprejemek" ("tip", "opis", "znesek", "kategorija", "datum", "banka_denarnica", "stanje_id") VALUES ('izdatek', 'kapa', 10.0, 'oblacila', '2017-01-10 17:34:36.354669', 'banka', 12); args=['izdatek', 'kapa', 10.0, 'oblacila', '2017-01-10 17:34:36.354669', 'banka', 12]
+(0.000) BEGIN; args=None
+(0.000) UPDATE "registration_stanje" SET "tip" = 'banka', "stanje" = -710.0, "uporabnik_id" = 8 WHERE "registration_stanje"."id" = 12; args=('banka', -710.0, 8, 12)
+(0.000) SELECT "registration_cilj"."id", "registration_cilj"."opis", "registration_cilj"."vrednost", "registration_cilj"."trenutno_privarcevano", "registration_cilj"."od_datuma", "registration_cilj"."do_datuma", "registration_cilj"."uporabnik_id" FROM "registration_cilj" WHERE "registration_cilj"."uporabnik_id" = 8; args=(8,)
+"POST /vnos.html/dodaj HTTP/1.1" 200 7894
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:34:38.007414' AND "django_session"."session_key" = '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr'); args=('2017-01-10 17:34:38.007414', '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+Exception while resolving variable 'izdatki' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [izdatki] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f20f1bd4e80>, \'csrf_token\': <SimpleLazyObject: \'Q9r1z9qjqOLdQ3l6upICZij2bEDtkOZFhVVCetoMdnKNUhnI7oPzGohtlxN4WBjD\'>, \'request\': <WSGIRequest: GET \'/pregled.html\'>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f20f1b6c6d8>, \'DEFAULT_MESSAGE_LEVELS\': {\'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40, \'DEBUG\': 10, \'INFO\': 20}, \'user\': <SimpleLazyObject: <User: markozeman>>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    <section class="main\'>, <django.template.defaulttags.URLNode object at 0x7f20f1aa6208>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f20f1aa6668>, <TextNode: \'\\n\\n                <div cl\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+Exception while resolving variable 'prejemki' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [prejemki] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f20f1bd4e80>, \'csrf_token\': <SimpleLazyObject: \'Q9r1z9qjqOLdQ3l6upICZij2bEDtkOZFhVVCetoMdnKNUhnI7oPzGohtlxN4WBjD\'>, \'request\': <WSGIRequest: GET \'/pregled.html\'>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f20f1b6c6d8>, \'DEFAULT_MESSAGE_LEVELS\': {\'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40, \'DEBUG\': 10, \'INFO\': 20}, \'user\': <SimpleLazyObject: <User: markozeman>>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    <section class="main\'>, <django.template.defaulttags.URLNode object at 0x7f20f1aa6208>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f20f1aa6668>, <TextNode: \'\\n\\n                <div cl\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+Exception while resolving variable 'cilji' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [cilji] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f20f1bd4e80>, \'csrf_token\': <SimpleLazyObject: \'Q9r1z9qjqOLdQ3l6upICZij2bEDtkOZFhVVCetoMdnKNUhnI7oPzGohtlxN4WBjD\'>, \'request\': <WSGIRequest: GET \'/pregled.html\'>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f20f1b6c6d8>, \'DEFAULT_MESSAGE_LEVELS\': {\'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40, \'DEBUG\': 10, \'INFO\': 20}, \'user\': <SimpleLazyObject: <User: markozeman>>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    <section class="main\'>, <django.template.defaulttags.URLNode object at 0x7f20f1aa6208>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f20f1aa6668>, <TextNode: \'\\n\\n                <div cl\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+"GET /pregled.html HTTP/1.1" 200 4707
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:34:40.254773' AND "django_session"."session_key" = '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr'); args=('2017-01-10 17:34:40.254773', '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+(0.000) SELECT "registration_stanje"."id", "registration_stanje"."tip", "registration_stanje"."stanje", "registration_stanje"."uporabnik_id" FROM "registration_stanje" WHERE ("registration_stanje"."uporabnik_id" = 8 AND "registration_stanje"."tip" = 'denarnica') LIMIT 1; args=(8, 'denarnica')
+(0.000) SELECT "registration_izdatekprejemek"."id", "registration_izdatekprejemek"."tip", "registration_izdatekprejemek"."opis", "registration_izdatekprejemek"."znesek", "registration_izdatekprejemek"."kategorija", "registration_izdatekprejemek"."datum", "registration_izdatekprejemek"."banka_denarnica", "registration_izdatekprejemek"."stanje_id" FROM "registration_izdatekprejemek" WHERE ("registration_izdatekprejemek"."stanje_id" = 13 AND "registration_izdatekprejemek"."tip" = 'izdatek'); args=(13, 'izdatek')
+"POST /pregled.html/isci HTTP/1.1" 200 5790
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:34:52.470999' AND "django_session"."session_key" = '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr'); args=('2017-01-10 17:34:52.470999', '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+Exception while resolving variable 'json_data' in template 'vizualizacija/vizualizacija_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [json_data] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f20f1bbbf60>, \'csrf_token\': <SimpleLazyObject: \'zJsdxOHv2E81nvf74UmhsCmV9R9PLoF60vWOc8FYPd7BrJhJHTte9IkmjKjqnbZ4\'>, \'request\': <WSGIRequest: GET \'/vizualizacija.html\'>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f20f1aa9f98>, \'DEFAULT_MESSAGE_LEVELS\': {\'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40, \'DEBUG\': 10, \'INFO\': 20}, \'user\': <SimpleLazyObject: <User: markozeman>>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    <section class="main\'>, <django.template.defaulttags.URLNode object at 0x7f20f1b6cf28>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f20f1b6c5c0>, <TextNode: \'\\n\\n                <div cl\'>, <django.template.loader_tags.IncludeNode object at 0x7f20f1b6ce10>, <TextNode: \'\\n\\n    </section>\\n\'>]>}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n\\n    <div id="chartConta\'>, <Variable Node: json_data|safe>, <TextNode: \';\\n\\n        var stevilo_dn\'>]>}]'
+"GET /vizualizacija.html HTTP/1.1" 200 5279
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:34:54.955893' AND "django_session"."session_key" = '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr'); args=('2017-01-10 17:34:54.955893', '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+(0.000) SELECT "registration_stanje"."id", "registration_stanje"."tip", "registration_stanje"."stanje", "registration_stanje"."uporabnik_id" FROM "registration_stanje" WHERE ("registration_stanje"."uporabnik_id" = 8 AND "registration_stanje"."tip" = 'denarnica') LIMIT 1; args=(8, 'denarnica')
+(0.000) SELECT "registration_izdatekprejemek"."id", "registration_izdatekprejemek"."tip", "registration_izdatekprejemek"."opis", "registration_izdatekprejemek"."znesek", "registration_izdatekprejemek"."kategorija", "registration_izdatekprejemek"."datum", "registration_izdatekprejemek"."banka_denarnica", "registration_izdatekprejemek"."stanje_id" FROM "registration_izdatekprejemek" WHERE "registration_izdatekprejemek"."stanje_id" = 13 ORDER BY "registration_izdatekprejemek"."datum" ASC; args=(13,)
+"POST /vizualizacija.html/prikazi HTTP/1.1" 200 5489
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:35:00.414510' AND "django_session"."session_key" = '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr'); args=('2017-01-10 17:35:00.414510', '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = '61bf2mwb7fnyfl8g5lsj2k9vr6otttlr'; args=('61bf2mwb7fnyfl8g5lsj2k9vr6otttlr',)
+(0.000) BEGIN; args=None
+(0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('61bf2mwb7fnyfl8g5lsj2k9vr6otttlr'); args=('61bf2mwb7fnyfl8g5lsj2k9vr6otttlr',)
+"GET /logout HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 3034
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'markoz'; args=('markoz',)
+(0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'fabzvk11seivkcuf4onbqlgnfuym55i2' LIMIT 1; args=('fabzvk11seivkcuf4onbqlgnfuym55i2',)
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'fabzvk11seivkcuf4onbqlgnfuym55i2', 'ZjM4NDEyMjExYWRhZGQxYjZhMWY2MzU1MWMzNmI3NDBhNGYwMTA5Mzp7fQ==', '2017-01-24 17:37:27.567484'; args=('fabzvk11seivkcuf4onbqlgnfuym55i2', 'ZjM4NDEyMjExYWRhZGQxYjZhMWY2MzU1MWMzNmI3NDBhNGYwMTA5Mzp7fQ==', '2017-01-24 17:37:27.567484')
+(0.000) BEGIN; args=None
+(0.000) UPDATE "auth_user" SET "last_login" = '2017-01-10 17:37:27.589293' WHERE "auth_user"."id" = 30; args=('2017-01-10 17:37:27.589293', 30)
+(0.000) BEGIN; args=None
+(0.000) UPDATE "django_session" SET "session_data" = 'YmJmM2QxNjI1MzI3OTYwMzFhMDIzNzM5ZDg4Njk1N2RmNjIzOGZjOTp7Il9hdXRoX3VzZXJfaGFzaCI6ImFiYTlkNWNlZGJhYjk4MDA0Y2IwZTFlODA2MjRhZmFhMGM0NjliMjYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIzMCJ9', "expire_date" = '2017-01-24 17:37:27.606090' WHERE "django_session"."session_key" = 'fabzvk11seivkcuf4onbqlgnfuym55i2'; args=('YmJmM2QxNjI1MzI3OTYwMzFhMDIzNzM5ZDg4Njk1N2RmNjIzOGZjOTp7Il9hdXRoX3VzZXJfaGFzaCI6ImFiYTlkNWNlZGJhYjk4MDA0Y2IwZTFlODA2MjRhZmFhMGM0NjliMjYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIzMCJ9', '2017-01-24 17:37:27.606090', 'fabzvk11seivkcuf4onbqlgnfuym55i2')
+"POST / HTTP/1.1" 302 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:37:27.620963' AND "django_session"."session_key" = 'fabzvk11seivkcuf4onbqlgnfuym55i2'); args=('2017-01-10 17:37:27.620963', 'fabzvk11seivkcuf4onbqlgnfuym55i2')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "registration_cilj"."id", "registration_cilj"."opis", "registration_cilj"."vrednost", "registration_cilj"."trenutno_privarcevano", "registration_cilj"."od_datuma", "registration_cilj"."do_datuma", "registration_cilj"."uporabnik_id" FROM "registration_cilj" WHERE "registration_cilj"."uporabnik_id" = 30; args=(30,)
+"GET /vnos.html HTTP/1.1" 200 7360
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:37:58.708188' AND "django_session"."session_key" = 'fabzvk11seivkcuf4onbqlgnfuym55i2'); args=('2017-01-10 17:37:58.708188', 'fabzvk11seivkcuf4onbqlgnfuym55i2')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "registration_cilj" ("opis", "vrednost", "trenutno_privarcevano", "od_datuma", "do_datuma", "uporabnik_id") VALUES ('najboljše vino', 300.0, 0.0, '2017-01-10 17:37:58.712933', '2017-01-25 00:00:00', 30); args=['najboljše vino', 300.0, 0.0, '2017-01-10 17:37:58.712933', '2017-01-25 00:00:00', 30]
+(0.000) SELECT "registration_cilj"."id", "registration_cilj"."opis", "registration_cilj"."vrednost", "registration_cilj"."trenutno_privarcevano", "registration_cilj"."od_datuma", "registration_cilj"."do_datuma", "registration_cilj"."uporabnik_id" FROM "registration_cilj" WHERE "registration_cilj"."uporabnik_id" = 30; args=(30,)
+"POST /vnos.html/dodajcilj HTTP/1.1" 200 7480
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:37:59.948568' AND "django_session"."session_key" = 'fabzvk11seivkcuf4onbqlgnfuym55i2'); args=('2017-01-10 17:37:59.948568', 'fabzvk11seivkcuf4onbqlgnfuym55i2')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+Exception while resolving variable 'izdatki' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [izdatki] in '[{\'False\': False, \'None\': None, \'True\': True}, {\'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7ff9ceeca390>, \'user\': <SimpleLazyObject: <User: markoz>>, \'csrf_token\': <SimpleLazyObject: \'7ijZ9xry2NIepxnBMNjbhuqaLWPBVWNYlAbOSgzidcJqRrK9H3kKmwIv9VW5bBe7\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7ff9cef22358>, \'request\': <WSGIRequest: GET \'/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'WARNING\': 30, \'DEBUG\': 10, \'ERROR\': 40, \'SUCCESS\': 25}}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    <section class="main\'>, <django.template.defaulttags.URLNode object at 0x7ff9cee8a7f0>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7ff9cee8a860>, <TextNode: \'\\n\\n                <div cl\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+Exception while resolving variable 'prejemki' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [prejemki] in '[{\'False\': False, \'None\': None, \'True\': True}, {\'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7ff9ceeca390>, \'user\': <SimpleLazyObject: <User: markoz>>, \'csrf_token\': <SimpleLazyObject: \'7ijZ9xry2NIepxnBMNjbhuqaLWPBVWNYlAbOSgzidcJqRrK9H3kKmwIv9VW5bBe7\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7ff9cef22358>, \'request\': <WSGIRequest: GET \'/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'WARNING\': 30, \'DEBUG\': 10, \'ERROR\': 40, \'SUCCESS\': 25}}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    <section class="main\'>, <django.template.defaulttags.URLNode object at 0x7ff9cee8a7f0>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7ff9cee8a860>, <TextNode: \'\\n\\n                <div cl\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+Exception while resolving variable 'cilji' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [cilji] in '[{\'False\': False, \'None\': None, \'True\': True}, {\'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7ff9ceeca390>, \'user\': <SimpleLazyObject: <User: markoz>>, \'csrf_token\': <SimpleLazyObject: \'7ijZ9xry2NIepxnBMNjbhuqaLWPBVWNYlAbOSgzidcJqRrK9H3kKmwIv9VW5bBe7\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7ff9cef22358>, \'request\': <WSGIRequest: GET \'/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'WARNING\': 30, \'DEBUG\': 10, \'ERROR\': 40, \'SUCCESS\': 25}}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    <section class="main\'>, <django.template.defaulttags.URLNode object at 0x7ff9cee8a7f0>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7ff9cee8a860>, <TextNode: \'\\n\\n                <div cl\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+"GET /pregled.html HTTP/1.1" 200 4703
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:38:03.232502' AND "django_session"."session_key" = 'fabzvk11seivkcuf4onbqlgnfuym55i2'); args=('2017-01-10 17:38:03.232502', 'fabzvk11seivkcuf4onbqlgnfuym55i2')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "registration_cilj"."id", "registration_cilj"."opis", "registration_cilj"."vrednost", "registration_cilj"."trenutno_privarcevano", "registration_cilj"."od_datuma", "registration_cilj"."do_datuma", "registration_cilj"."uporabnik_id" FROM "registration_cilj" WHERE "registration_cilj"."uporabnik_id" = 30 ORDER BY "registration_cilj"."do_datuma" DESC; args=(30,)
+"POST /pregled.html/isci HTTP/1.1" 200 5161
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:38:06.710481' AND "django_session"."session_key" = 'fabzvk11seivkcuf4onbqlgnfuym55i2'); args=('2017-01-10 17:38:06.710481', 'fabzvk11seivkcuf4onbqlgnfuym55i2')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+Exception while resolving variable 'json_data' in template 'vizualizacija/vizualizacija_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [json_data] in '[{\'False\': False, \'None\': None, \'True\': True}, {\'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7ff9ceecab00>, \'user\': <SimpleLazyObject: <User: markoz>>, \'csrf_token\': <SimpleLazyObject: \'geucBF57IVDUWY32wak5n3JJETpOzT4huwm1kodRTkE6oSqArqlEs5142SwiPyvq\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7ff9ceec2630>, \'request\': <WSGIRequest: GET \'/vizualizacija.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'WARNING\': 30, \'DEBUG\': 10, \'ERROR\': 40, \'SUCCESS\': 25}}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    <section class="main\'>, <django.template.defaulttags.URLNode object at 0x7ff9cee8ada0>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7ff9cee8a6d8>, <TextNode: \'\\n\\n                <div cl\'>, <django.template.loader_tags.IncludeNode object at 0x7ff9cee8a898>, <TextNode: \'\\n\\n    </section>\\n\'>]>}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n\\n    <div id="chartConta\'>, <Variable Node: json_data|safe>, <TextNode: \';\\n\\n        var stevilo_dn\'>]>}]'
+"GET /vizualizacija.html HTTP/1.1" 200 5275
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:38:09.344685' AND "django_session"."session_key" = 'fabzvk11seivkcuf4onbqlgnfuym55i2'); args=('2017-01-10 17:38:09.344685', 'fabzvk11seivkcuf4onbqlgnfuym55i2')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "django_content_type"."app_label", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auth_user_user_permissions" ON ("auth_permission"."id" = "auth_user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_user_user_permissions"."user_id" = 30; args=(30,)
+(0.000) SELECT "django_content_type"."app_label", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auth_group_permissions" ON ("auth_permission"."id" = "auth_group_permissions"."permission_id") INNER JOIN "auth_group" ON ("auth_group_permissions"."group_id" = "auth_group"."id") INNER JOIN "auth_user_groups" ON ("auth_group"."id" = "auth_user_groups"."group_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_user_groups"."user_id" = 30; args=(30,)
+(0.000) SELECT "registration_stanje"."id", "registration_stanje"."tip", "registration_stanje"."stanje", "registration_stanje"."uporabnik_id" FROM "registration_stanje" WHERE ("registration_stanje"."uporabnik_id" = 30 AND "registration_stanje"."tip" = 'denarnica') LIMIT 1; args=(30, 'denarnica')
+(0.000) SELECT "registration_izdatekprejemek"."id", "registration_izdatekprejemek"."tip", "registration_izdatekprejemek"."opis", "registration_izdatekprejemek"."znesek", "registration_izdatekprejemek"."kategorija", "registration_izdatekprejemek"."datum", "registration_izdatekprejemek"."banka_denarnica", "registration_izdatekprejemek"."stanje_id" FROM "registration_izdatekprejemek" WHERE "registration_izdatekprejemek"."stanje_id" = 19 ORDER BY "registration_izdatekprejemek"."datum" ASC; args=(19,)
+"POST /vizualizacija.html/prikazi HTTP/1.1" 200 5367
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:38:15.382964' AND "django_session"."session_key" = 'fabzvk11seivkcuf4onbqlgnfuym55i2'); args=('2017-01-10 17:38:15.382964', 'fabzvk11seivkcuf4onbqlgnfuym55i2')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "django_content_type"."app_label", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auth_user_user_permissions" ON ("auth_permission"."id" = "auth_user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_user_user_permissions"."user_id" = 30; args=(30,)
+(0.000) SELECT "django_content_type"."app_label", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auth_group_permissions" ON ("auth_permission"."id" = "auth_group_permissions"."permission_id") INNER JOIN "auth_group" ON ("auth_group_permissions"."group_id" = "auth_group"."id") INNER JOIN "auth_user_groups" ON ("auth_group"."id" = "auth_user_groups"."group_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_user_groups"."user_id" = 30; args=(30,)
+(0.000) SELECT "registration_stanje"."id", "registration_stanje"."tip", "registration_stanje"."stanje", "registration_stanje"."uporabnik_id" FROM "registration_stanje" WHERE "registration_stanje"."uporabnik_id" = 30 LIMIT 1; args=(30,)
+(0.000) SELECT "registration_izdatekprejemek"."id", "registration_izdatekprejemek"."tip", "registration_izdatekprejemek"."opis", "registration_izdatekprejemek"."znesek", "registration_izdatekprejemek"."kategorija", "registration_izdatekprejemek"."datum", "registration_izdatekprejemek"."banka_denarnica", "registration_izdatekprejemek"."stanje_id" FROM "registration_izdatekprejemek" WHERE "registration_izdatekprejemek"."stanje_id" = 18 ORDER BY "registration_izdatekprejemek"."datum" ASC; args=(18,)
+(0.000) SELECT "registration_stanje"."id", "registration_stanje"."tip", "registration_stanje"."stanje", "registration_stanje"."uporabnik_id" FROM "registration_stanje" WHERE "registration_stanje"."uporabnik_id" = 30 LIMIT 1 OFFSET 1; args=(30,)
+(0.000) SELECT "registration_izdatekprejemek"."id", "registration_izdatekprejemek"."tip", "registration_izdatekprejemek"."opis", "registration_izdatekprejemek"."znesek", "registration_izdatekprejemek"."kategorija", "registration_izdatekprejemek"."datum", "registration_izdatekprejemek"."banka_denarnica", "registration_izdatekprejemek"."stanje_id" FROM "registration_izdatekprejemek" WHERE "registration_izdatekprejemek"."stanje_id" = 19 ORDER BY "registration_izdatekprejemek"."datum" ASC; args=(19,)
+"POST /vizualizacija.html/prikazi HTTP/1.1" 200 5376
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:38:20.600054' AND "django_session"."session_key" = 'fabzvk11seivkcuf4onbqlgnfuym55i2'); args=('2017-01-10 17:38:20.600054', 'fabzvk11seivkcuf4onbqlgnfuym55i2')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "django_content_type"."app_label", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auth_user_user_permissions" ON ("auth_permission"."id" = "auth_user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_user_user_permissions"."user_id" = 30; args=(30,)
+(0.000) SELECT "django_content_type"."app_label", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auth_group_permissions" ON ("auth_permission"."id" = "auth_group_permissions"."permission_id") INNER JOIN "auth_group" ON ("auth_group_permissions"."group_id" = "auth_group"."id") INNER JOIN "auth_user_groups" ON ("auth_group"."id" = "auth_user_groups"."group_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_user_groups"."user_id" = 30; args=(30,)
+(0.000) SELECT "registration_stanje"."id", "registration_stanje"."tip", "registration_stanje"."stanje", "registration_stanje"."uporabnik_id" FROM "registration_stanje" WHERE "registration_stanje"."uporabnik_id" = 30 LIMIT 1; args=(30,)
+(0.000) SELECT "registration_izdatekprejemek"."id", "registration_izdatekprejemek"."tip", "registration_izdatekprejemek"."opis", "registration_izdatekprejemek"."znesek", "registration_izdatekprejemek"."kategorija", "registration_izdatekprejemek"."datum", "registration_izdatekprejemek"."banka_denarnica", "registration_izdatekprejemek"."stanje_id" FROM "registration_izdatekprejemek" WHERE "registration_izdatekprejemek"."stanje_id" = 18 ORDER BY "registration_izdatekprejemek"."datum" ASC; args=(18,)
+(0.000) SELECT "registration_stanje"."id", "registration_stanje"."tip", "registration_stanje"."stanje", "registration_stanje"."uporabnik_id" FROM "registration_stanje" WHERE "registration_stanje"."uporabnik_id" = 30 LIMIT 1 OFFSET 1; args=(30,)
+(0.000) SELECT "registration_izdatekprejemek"."id", "registration_izdatekprejemek"."tip", "registration_izdatekprejemek"."opis", "registration_izdatekprejemek"."znesek", "registration_izdatekprejemek"."kategorija", "registration_izdatekprejemek"."datum", "registration_izdatekprejemek"."banka_denarnica", "registration_izdatekprejemek"."stanje_id" FROM "registration_izdatekprejemek" WHERE "registration_izdatekprejemek"."stanje_id" = 19 ORDER BY "registration_izdatekprejemek"."datum" ASC; args=(19,)
+"POST /vizualizacija.html/prikazi HTTP/1.1" 200 5378
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:38:27.348865' AND "django_session"."session_key" = 'fabzvk11seivkcuf4onbqlgnfuym55i2'); args=('2017-01-10 17:38:27.348865', 'fabzvk11seivkcuf4onbqlgnfuym55i2')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "django_content_type"."app_label", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auth_user_user_permissions" ON ("auth_permission"."id" = "auth_user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_user_user_permissions"."user_id" = 30; args=(30,)
+(0.000) SELECT "django_content_type"."app_label", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auth_group_permissions" ON ("auth_permission"."id" = "auth_group_permissions"."permission_id") INNER JOIN "auth_group" ON ("auth_group_permissions"."group_id" = "auth_group"."id") INNER JOIN "auth_user_groups" ON ("auth_group"."id" = "auth_user_groups"."group_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_user_groups"."user_id" = 30; args=(30,)
+(0.000) SELECT "registration_stanje"."id", "registration_stanje"."tip", "registration_stanje"."stanje", "registration_stanje"."uporabnik_id" FROM "registration_stanje" WHERE ("registration_stanje"."uporabnik_id" = 30 AND "registration_stanje"."tip" = 'banka') LIMIT 1; args=(30, 'banka')
+(0.000) SELECT "registration_izdatekprejemek"."id", "registration_izdatekprejemek"."tip", "registration_izdatekprejemek"."opis", "registration_izdatekprejemek"."znesek", "registration_izdatekprejemek"."kategorija", "registration_izdatekprejemek"."datum", "registration_izdatekprejemek"."banka_denarnica", "registration_izdatekprejemek"."stanje_id" FROM "registration_izdatekprejemek" WHERE "registration_izdatekprejemek"."stanje_id" = 18 ORDER BY "registration_izdatekprejemek"."datum" ASC; args=(18,)
+"POST /vizualizacija.html/prikazi HTTP/1.1" 200 5320
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-10 17:38:28.956305' AND "django_session"."session_key" = 'fabzvk11seivkcuf4onbqlgnfuym55i2'); args=('2017-01-10 17:38:28.956305', 'fabzvk11seivkcuf4onbqlgnfuym55i2')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'fabzvk11seivkcuf4onbqlgnfuym55i2'; args=('fabzvk11seivkcuf4onbqlgnfuym55i2',)
+(0.000) BEGIN; args=None
+(0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('fabzvk11seivkcuf4onbqlgnfuym55i2'); args=('fabzvk11seivkcuf4onbqlgnfuym55i2',)
+"GET /logout HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 3034

@@ -7,6 +7,11 @@ from django.contrib.contenttypes.models import ContentType
 
 from .models import *
 
+import logging
+import datetime
+
+logger = logging.getLogger('my_logger')
+
 
 def register_user(request):
     usr = request.POST['up_ime']
@@ -40,6 +45,8 @@ def register_user(request):
                     group.permissions.set([permission])
                 else:
                     print("else... more than zero permissions")
+                    logger.warning(datetime.datetime.now().strftime("%B %d, %Y - %I:%M%p") + ' -- ' + str(
+                        request.user) + ' -- ' + 'More than zero permissions.\n')
             else:
                 g = Group.objects.get_or_create(name="OtherUsers")
                 group = Group.objects.get(name='OtherUsers')
@@ -51,13 +58,19 @@ def register_user(request):
 
             messages.error(request, 'User registered.')
             print("\nUser registered.\n")
+            logger.debug(datetime.datetime.now().strftime("%B %d, %Y - %I:%M%p") + ' -- ' + str(
+                request.user) + ' -- ' + 'User registered.\n')
             return HttpResponseRedirect(reverse('registration'))
         else:
             messages.error(request, 'This username is already taken.')
             print("\nThis username is already taken.\n")
+            logger.error(datetime.datetime.now().strftime("%B %d, %Y - %I:%M%p") + ' -- ' + str(
+                request.user) + ' -- ' + 'This username is already taken.\n')
             return HttpResponseRedirect(reverse('registration'))
     else:
         messages.error(request, 'Passwords are not the same or username is not longer than 5 characters or captcha is not clicked.')
+        logger.error(datetime.datetime.now().strftime("%B %d, %Y - %I:%M%p") + ' -- ' + str(
+            request.user) + ' -- ' + 'Passwords are not the same or username is not longer than 5 characters or captcha is not clicked.\n')
         print("\nPasswords are not the same or username is not longer than 5 characters or captcha is not clicked.\n")
         return HttpResponseRedirect(reverse('registration'))
 
@@ -67,11 +80,13 @@ def register_user(request):
 
 def login_user(request):
     username = request.POST['up_ime']
-    password = request.POST.get('geslo', False)
-    password_2 = request.POST.get('geslo_2', False)
+    password = request.POST.get('geslo')
+    password_2 = request.POST.get('geslo_2')
 
-    if (password is False and password_2 is False):
+    if (len(password) == 0 and len(password_2) == 0):
         print("Password input is blank.")
+        messages.error(request, 'Password input is blank.')
+        logger.error(datetime.datetime.now().strftime("%B %d, %Y - %I:%M%p") + ' -- ' + str(request.user) + ' -- ' + 'Password input is blank.\n')
     elif (len(password_2 )!= 0):
         password = password_2
 
@@ -79,8 +94,11 @@ def login_user(request):
     if user is not None:
         login(request, user)
         print("Logged in.")
+        logger.debug(datetime.datetime.now().strftime("%B %d, %Y - %I:%M%p") + ' -- ' + str(request.user) + ' -- ' + 'Logged in.\n')
         return HttpResponseRedirect(reverse('vnos'))
     else:
         print("Invalid login")
+        messages.error(request, 'Invalid login')
+        logger.error(datetime.datetime.now().strftime("%B %d, %Y - %I:%M%p") + ' -- ' + str(request.user) + ' -- ' + 'Invalid login.\n')
         return HttpResponseRedirect(reverse('registration'))
 

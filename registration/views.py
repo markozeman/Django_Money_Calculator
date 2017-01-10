@@ -4,6 +4,11 @@ from django.contrib.auth.decorators import login_required, permission_required
 
 from .service import *
 
+import logging
+import datetime
+
+logger = logging.getLogger('my_logger')
+
 
 def registration(request):
     if (request.POST.get("register")):
@@ -19,4 +24,6 @@ def registration(request):
 def logout_user(request):
   logout(request)
   print("Logged out")
+  logger.debug(
+      datetime.datetime.now().strftime("%B %d, %Y - %I:%M%p") + ' -- ' + str(request.user) + ' -- ' + 'Logged out.\n')
   return HttpResponseRedirect(reverse('registration'))

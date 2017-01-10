@@ -1,6 +1,12 @@
 import datetime
 from django.utils.timezone import make_naive
 
+import logging
+import datetime
+
+logger = logging.getLogger('my_logger')
+
+
 def search(request):
     select_opcija = request.POST['select_opcija']
     kategorija = request.POST['kategorija']
@@ -80,5 +86,8 @@ def search(request):
 
         context['izdatki'] = izdatki_kategorije
         context['prejemki'] = prejemki_kategorije
+
+    s = 'Search in ' + select_opcija + " for last " + str(stevilo_dni) + " days for category " + kategorija + ".\n"
+    logger.debug(datetime.datetime.now().strftime("%B %d, %Y - %I:%M%p") + ' -- ' + str(request.user) + ' -- ' + s)
 
     return context

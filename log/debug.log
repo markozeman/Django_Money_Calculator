@@ -12636,3 +12636,116 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [json_data] in 
 "GET /sl-si/ HTTP/1.1" 200 3455
 "GET /en-us/ HTTP/1.1" 200 3425
 "GET /sl-si/ HTTP/1.1" 200 3455
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/urls/resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/urls/resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'LocaleRegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'LocaleRegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>'
+"GET / HTTP/1.1" 302 0
+"GET /en-us/ HTTP/1.1" 200 3437
+"GET /static/css/style_min.css HTTP/1.1" 200 3788
+"GET /static/js/script_min.js HTTP/1.1" 200 15555
+"GET /static/js/camera_min.js HTTP/1.1" 200 1363
+"GET /sl-si/ HTTP/1.1" 200 3467
+"GET /en-us/ HTTP/1.1" 200 3437
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'markoz'; args=('markoz',)
+(0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'tg8xcg20ewz917vthmjg2tqw3fskq1fg' LIMIT 1; args=('tg8xcg20ewz917vthmjg2tqw3fskq1fg',)
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'tg8xcg20ewz917vthmjg2tqw3fskq1fg', 'ZjM4NDEyMjExYWRhZGQxYjZhMWY2MzU1MWMzNmI3NDBhNGYwMTA5Mzp7fQ==', '2017-01-26 22:06:54.008598'; args=('tg8xcg20ewz917vthmjg2tqw3fskq1fg', 'ZjM4NDEyMjExYWRhZGQxYjZhMWY2MzU1MWMzNmI3NDBhNGYwMTA5Mzp7fQ==', '2017-01-26 22:06:54.008598')
+(0.000) BEGIN; args=None
+(0.000) UPDATE "auth_user" SET "last_login" = '2017-01-12 22:06:54.020310' WHERE "auth_user"."id" = 30; args=('2017-01-12 22:06:54.020310', 30)
+(0.000) BEGIN; args=None
+(0.000) UPDATE "django_session" SET "session_data" = 'N2MyNDM3NzBjYjdhNTBkMzdiMjRhNzgxMjNlYWNlNzFjYWEwZDRjMDp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiYWJhOWQ1Y2VkYmFiOTgwMDRjYjBlMWU4MDYyNGFmYWEwYzQ2OWIyNiIsIl9hdXRoX3VzZXJfaWQiOiIzMCJ9', "expire_date" = '2017-01-26 22:06:54.031093' WHERE "django_session"."session_key" = 'tg8xcg20ewz917vthmjg2tqw3fskq1fg'; args=('N2MyNDM3NzBjYjdhNTBkMzdiMjRhNzgxMjNlYWNlNzFjYWEwZDRjMDp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiYWJhOWQ1Y2VkYmFiOTgwMDRjYjBlMWU4MDYyNGFmYWEwYzQ2OWIyNiIsIl9hdXRoX3VzZXJfaWQiOiIzMCJ9', '2017-01-26 22:06:54.031093', 'tg8xcg20ewz917vthmjg2tqw3fskq1fg')
+"POST /en-us/ HTTP/1.1" 302 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-12 22:06:54.046194' AND "django_session"."session_key" = 'tg8xcg20ewz917vthmjg2tqw3fskq1fg'); args=('2017-01-12 22:06:54.046194', 'tg8xcg20ewz917vthmjg2tqw3fskq1fg')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "registration_cilj"."id", "registration_cilj"."opis", "registration_cilj"."vrednost", "registration_cilj"."trenutno_privarcevano", "registration_cilj"."od_datuma", "registration_cilj"."do_datuma", "registration_cilj"."uporabnik_id" FROM "registration_cilj" WHERE "registration_cilj"."uporabnik_id" = 30; args=(30,)
+"GET /en-us/vnos.html HTTP/1.1" 200 7883
+"GET /static/css/style_min.css HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-12 22:07:15.737510' AND "django_session"."session_key" = 'tg8xcg20ewz917vthmjg2tqw3fskq1fg'); args=('2017-01-12 22:07:15.737510', 'tg8xcg20ewz917vthmjg2tqw3fskq1fg')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'tg8xcg20ewz917vthmjg2tqw3fskq1fg'; args=('tg8xcg20ewz917vthmjg2tqw3fskq1fg',)
+(0.000) BEGIN; args=None
+(0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('tg8xcg20ewz917vthmjg2tqw3fskq1fg'); args=('tg8xcg20ewz917vthmjg2tqw3fskq1fg',)
+"GET /en-us/logout HTTP/1.1" 302 0
+"GET /en-us/ HTTP/1.1" 200 3437
+"GET /static/css/style_min.css HTTP/1.1" 200 3788
+"GET /static/js/script_min.js HTTP/1.1" 200 15555
+"GET /static/js/camera_min.js HTTP/1.1" 200 1363
+"GET /static/images/logo.jpg HTTP/1.1" 200 43070
+"GET /static/images/escheresque_ste.png HTTP/1.1" 200 493
+"GET /static/images/mochaGrunge.png HTTP/1.1" 200 69250

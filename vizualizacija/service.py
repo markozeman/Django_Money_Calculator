@@ -8,6 +8,13 @@ logger = logging.getLogger('my_logger')
 
 
 def show_visual(request):
+    """ Shows visual graph
+
+    Reads user input and shows visual representation on the graph for chosen time period. It shows how your money balance has changed in this period.
+
+    :param request: HTTP request
+    :return: JSON, which is used with JS to display the chart
+    """
     dropdown = request.POST['dropdown']
     obdobje = request.POST['obdobje']
 
@@ -68,15 +75,15 @@ def show_visual(request):
                 stanja_skupaj.append(["-", znesek, datum])
 
     if (dropdown == "wallet"):
-        stanja_denarnica = procces_list(stanja_denarnica)
+        stanja_denarnica = process_list(stanja_denarnica)
         json_data = prepare_visual_data(danes, stevilo_dni, stanja_denarnica, dropdown)
         print(stanja_denarnica)
     elif (dropdown == "bank"):
-        stanja_banka = procces_list(stanja_banka)
+        stanja_banka = process_list(stanja_banka)
         json_data = prepare_visual_data(danes, stevilo_dni, stanja_banka, dropdown)
         print(stanja_banka)
     elif (dropdown == "wallet_and_bank"):
-        stanja_skupaj = procces_list(stanja_skupaj)
+        stanja_skupaj = process_list(stanja_skupaj)
         json_data = prepare_visual_data(danes, stevilo_dni, stanja_skupaj, dropdown)
         print(stanja_skupaj)
 
@@ -86,7 +93,14 @@ def show_visual(request):
     return json_data
 
 
-def procces_list(data):
+def process_list(data):
+    """ Processes list items and changes them into the right form
+
+    Goes through the list and saves data to new list in form [money_status, date]
+
+    :param data: list of data in form [plus_or_minus, money_status, date]
+    :return: new processsed list
+    """
     podatki = []
     stanje = 0
 
@@ -104,6 +118,16 @@ def procces_list(data):
 
 
 def prepare_visual_data(danes, stevilo_dni, data, dropdown):
+    """ Prepares JSON data
+
+    From input data parses all important informations into JSON.
+
+    :param danes: date today
+    :param stevilo_dni: number of days for the time period
+    :param data: data to parse
+    :param dropdown: chosen value from dropdown (wallet, bank, together)
+    :return: JSON object, prepared for use in JS
+    """
     date_data = {}
 
     for item in data:

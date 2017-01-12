@@ -10161,3 +10161,840 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [cilji] in '[{\
 (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('ikjq1ui0iraq99dnb00xf5ojrkjlhjuc'); args=('ikjq1ui0iraq99dnb00xf5ojrkjlhjuc',)
 "GET /en-us/logout HTTP/1.1" 302 0
 "GET /en-us/ HTTP/1.1" 200 3094
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/urls/resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/urls/resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'LocaleRegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'LocaleRegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>'
+"GET / HTTP/1.1" 302 0
+"GET /en-us/ HTTP/1.1" 200 3094
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/urls/resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/urls/resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'LocaleRegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'LocaleRegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>'
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2060
+"GET /en-us/ HTTP/1.1" 200 3094
+"GET /sl-si/ HTTP/1.1" 200 3115
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'markozeman'; args=('markozeman',)
+(0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = '03mm0jpj4sl125yq3jrn246tug0iryb2' LIMIT 1; args=('03mm0jpj4sl125yq3jrn246tug0iryb2',)
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT '03mm0jpj4sl125yq3jrn246tug0iryb2', 'ZjM4NDEyMjExYWRhZGQxYjZhMWY2MzU1MWMzNmI3NDBhNGYwMTA5Mzp7fQ==', '2017-01-26 11:51:10.092960'; args=('03mm0jpj4sl125yq3jrn246tug0iryb2', 'ZjM4NDEyMjExYWRhZGQxYjZhMWY2MzU1MWMzNmI3NDBhNGYwMTA5Mzp7fQ==', '2017-01-26 11:51:10.092960')
+(0.000) BEGIN; args=None
+(0.000) UPDATE "auth_user" SET "last_login" = '2017-01-12 11:51:10.104877' WHERE "auth_user"."id" = 8; args=('2017-01-12 11:51:10.104877', 8)
+(0.000) BEGIN; args=None
+(0.000) UPDATE "django_session" SET "session_data" = 'MDJiNTU2YWRhMGI0NzIxNmQ4N2FmYjQ5MDE0Y2E4OWY2YTYyYjFkNTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjgiLCJfYXV0aF91c2VyX2hhc2giOiIxOGZhZjI3MmUzNjQ2NjljOTU1MjU5M2QzODQ4YzcwZTcyM2M5OTc2In0=', "expire_date" = '2017-01-26 11:51:10.116386' WHERE "django_session"."session_key" = '03mm0jpj4sl125yq3jrn246tug0iryb2'; args=('MDJiNTU2YWRhMGI0NzIxNmQ4N2FmYjQ5MDE0Y2E4OWY2YTYyYjFkNTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjgiLCJfYXV0aF91c2VyX2hhc2giOiIxOGZhZjI3MmUzNjQ2NjljOTU1MjU5M2QzODQ4YzcwZTcyM2M5OTc2In0=', '2017-01-26 11:51:10.116386', '03mm0jpj4sl125yq3jrn246tug0iryb2')
+"POST /sl-si/ HTTP/1.1" 302 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '03mm0jpj4sl125yq3jrn246tug0iryb2' AND "django_session"."expire_date" > '2017-01-12 11:51:10.131469'); args=('03mm0jpj4sl125yq3jrn246tug0iryb2', '2017-01-12 11:51:10.131469')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+(0.000) SELECT "registration_cilj"."id", "registration_cilj"."opis", "registration_cilj"."vrednost", "registration_cilj"."trenutno_privarcevano", "registration_cilj"."od_datuma", "registration_cilj"."do_datuma", "registration_cilj"."uporabnik_id" FROM "registration_cilj" WHERE "registration_cilj"."uporabnik_id" = 8; args=(8,)
+"GET /sl-si/vnos.html HTTP/1.1" 200 7992
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '03mm0jpj4sl125yq3jrn246tug0iryb2' AND "django_session"."expire_date" > '2017-01-12 11:51:12.240153'); args=('03mm0jpj4sl125yq3jrn246tug0iryb2', '2017-01-12 11:51:12.240153')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+Exception while resolving variable 'izdatki' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [izdatki] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f54c7048668>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f54c704b390>, \'request\': <WSGIRequest: GET \'/sl-si/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'SUCCESS\': 25, \'ERROR\': 40, \'WARNING\': 30, \'DEBUG\': 10}, \'user\': <SimpleLazyObject: <User: markozeman>>, \'csrf_token\': <SimpleLazyObject: \'SwNaclROzIw6UTloY6LEAuA7O2dD62wmxmr0GiypptHRJpI0mYg4PO9cjsS1pPPX\'>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    \'>, <django.template.defaulttags.LoadNode object at 0x7f54c7044828>, <TextNode: \'\\n\\n    <section class="mai\'>, <django.template.defaulttags.URLNode object at 0x7f54c7044860>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f54c70447b8>, <TextNode: \'\\n\\n                <div cl\'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70448d0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044908>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044940>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044978>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70449b0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70449e8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044a20>, <TextNode: \', obutev </option>\\n      \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044a58>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044a90>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044ac8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044b00>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044b38>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044b70>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044ba8>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044be0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044c18>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044c50>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044c88>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044cc0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044cf8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044d30>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044d68>, <TextNode: \'">\\n                </div>\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+Exception while resolving variable 'prejemki' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [prejemki] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f54c7048668>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f54c704b390>, \'request\': <WSGIRequest: GET \'/sl-si/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'SUCCESS\': 25, \'ERROR\': 40, \'WARNING\': 30, \'DEBUG\': 10}, \'user\': <SimpleLazyObject: <User: markozeman>>, \'csrf_token\': <SimpleLazyObject: \'SwNaclROzIw6UTloY6LEAuA7O2dD62wmxmr0GiypptHRJpI0mYg4PO9cjsS1pPPX\'>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    \'>, <django.template.defaulttags.LoadNode object at 0x7f54c7044828>, <TextNode: \'\\n\\n    <section class="mai\'>, <django.template.defaulttags.URLNode object at 0x7f54c7044860>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f54c70447b8>, <TextNode: \'\\n\\n                <div cl\'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70448d0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044908>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044940>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044978>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70449b0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70449e8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044a20>, <TextNode: \', obutev </option>\\n      \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044a58>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044a90>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044ac8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044b00>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044b38>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044b70>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044ba8>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044be0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044c18>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044c50>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044c88>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044cc0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044cf8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044d30>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044d68>, <TextNode: \'">\\n                </div>\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+Exception while resolving variable 'cilji' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [cilji] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f54c7048668>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f54c704b390>, \'request\': <WSGIRequest: GET \'/sl-si/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'SUCCESS\': 25, \'ERROR\': 40, \'WARNING\': 30, \'DEBUG\': 10}, \'user\': <SimpleLazyObject: <User: markozeman>>, \'csrf_token\': <SimpleLazyObject: \'SwNaclROzIw6UTloY6LEAuA7O2dD62wmxmr0GiypptHRJpI0mYg4PO9cjsS1pPPX\'>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    \'>, <django.template.defaulttags.LoadNode object at 0x7f54c7044828>, <TextNode: \'\\n\\n    <section class="mai\'>, <django.template.defaulttags.URLNode object at 0x7f54c7044860>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f54c70447b8>, <TextNode: \'\\n\\n                <div cl\'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70448d0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044908>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044940>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044978>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70449b0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70449e8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044a20>, <TextNode: \', obutev </option>\\n      \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044a58>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044a90>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044ac8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044b00>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044b38>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044b70>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044ba8>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044be0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044c18>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044c50>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044c88>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044cc0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044cf8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044d30>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044d68>, <TextNode: \'">\\n                </div>\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+"GET /sl-si/pregled.html HTTP/1.1" 200 4808
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '03mm0jpj4sl125yq3jrn246tug0iryb2' AND "django_session"."expire_date" > '2017-01-12 11:51:13.724516'); args=('03mm0jpj4sl125yq3jrn246tug0iryb2', '2017-01-12 11:51:13.724516')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+(0.000) SELECT "registration_cilj"."id", "registration_cilj"."opis", "registration_cilj"."vrednost", "registration_cilj"."trenutno_privarcevano", "registration_cilj"."od_datuma", "registration_cilj"."do_datuma", "registration_cilj"."uporabnik_id" FROM "registration_cilj" WHERE "registration_cilj"."uporabnik_id" = 8; args=(8,)
+"GET /sl-si/vnos.html HTTP/1.1" 200 7992
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '03mm0jpj4sl125yq3jrn246tug0iryb2' AND "django_session"."expire_date" > '2017-01-12 11:51:17.111976'); args=('03mm0jpj4sl125yq3jrn246tug0iryb2', '2017-01-12 11:51:17.111976')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+(0.000) SELECT "registration_cilj"."id", "registration_cilj"."opis", "registration_cilj"."vrednost", "registration_cilj"."trenutno_privarcevano", "registration_cilj"."od_datuma", "registration_cilj"."do_datuma", "registration_cilj"."uporabnik_id" FROM "registration_cilj" WHERE "registration_cilj"."uporabnik_id" = 8; args=(8,)
+"GET /sl-si/vnos.html HTTP/1.1" 200 7992
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '03mm0jpj4sl125yq3jrn246tug0iryb2' AND "django_session"."expire_date" > '2017-01-12 11:51:18.294810'); args=('03mm0jpj4sl125yq3jrn246tug0iryb2', '2017-01-12 11:51:18.294810')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+Exception while resolving variable 'izdatki' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [izdatki] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f54c7097d30>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f54c704e160>, \'request\': <WSGIRequest: GET \'/sl-si/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'SUCCESS\': 25, \'ERROR\': 40, \'WARNING\': 30, \'DEBUG\': 10}, \'user\': <SimpleLazyObject: <User: markozeman>>, \'csrf_token\': <SimpleLazyObject: \'evGNfI60l2OdZ8GgjY1TOLrNkpivIbhsTlkDJFNBbNZYOE3SHQwj350SPPXT1YA3\'>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    \'>, <django.template.defaulttags.LoadNode object at 0x7f54c704bda0>, <TextNode: \'\\n\\n    <section class="mai\'>, <django.template.defaulttags.URLNode object at 0x7f54c704b4a8>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f54c704ba20>, <TextNode: \'\\n\\n                <div cl\'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704bdd8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b0f0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b1d0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b5c0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b588>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b630>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704bd68>, <TextNode: \', obutev </option>\\n      \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704ba90>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b3c8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704bcc0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672e940>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672eb38>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672e780>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672e588>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672e9b0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7104400>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7104e80>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7104390>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c71044e0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c71042e8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c71044a8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c71043c8>, <TextNode: \'">\\n                </div>\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+Exception while resolving variable 'prejemki' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [prejemki] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f54c7097d30>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f54c704e160>, \'request\': <WSGIRequest: GET \'/sl-si/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'SUCCESS\': 25, \'ERROR\': 40, \'WARNING\': 30, \'DEBUG\': 10}, \'user\': <SimpleLazyObject: <User: markozeman>>, \'csrf_token\': <SimpleLazyObject: \'evGNfI60l2OdZ8GgjY1TOLrNkpivIbhsTlkDJFNBbNZYOE3SHQwj350SPPXT1YA3\'>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    \'>, <django.template.defaulttags.LoadNode object at 0x7f54c704bda0>, <TextNode: \'\\n\\n    <section class="mai\'>, <django.template.defaulttags.URLNode object at 0x7f54c704b4a8>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f54c704ba20>, <TextNode: \'\\n\\n                <div cl\'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704bdd8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b0f0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b1d0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b5c0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b588>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b630>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704bd68>, <TextNode: \', obutev </option>\\n      \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704ba90>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b3c8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704bcc0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672e940>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672eb38>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672e780>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672e588>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672e9b0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7104400>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7104e80>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7104390>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c71044e0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c71042e8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c71044a8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c71043c8>, <TextNode: \'">\\n                </div>\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+Exception while resolving variable 'cilji' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [cilji] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f54c7097d30>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f54c704e160>, \'request\': <WSGIRequest: GET \'/sl-si/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'SUCCESS\': 25, \'ERROR\': 40, \'WARNING\': 30, \'DEBUG\': 10}, \'user\': <SimpleLazyObject: <User: markozeman>>, \'csrf_token\': <SimpleLazyObject: \'evGNfI60l2OdZ8GgjY1TOLrNkpivIbhsTlkDJFNBbNZYOE3SHQwj350SPPXT1YA3\'>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    \'>, <django.template.defaulttags.LoadNode object at 0x7f54c704bda0>, <TextNode: \'\\n\\n    <section class="mai\'>, <django.template.defaulttags.URLNode object at 0x7f54c704b4a8>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f54c704ba20>, <TextNode: \'\\n\\n                <div cl\'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704bdd8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b0f0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b1d0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b5c0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b588>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b630>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704bd68>, <TextNode: \', obutev </option>\\n      \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704ba90>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704b3c8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c704bcc0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672e940>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672eb38>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672e780>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672e588>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c672e9b0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7104400>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7104e80>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7104390>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c71044e0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c71042e8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c71044a8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c71043c8>, <TextNode: \'">\\n                </div>\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+"GET /sl-si/pregled.html HTTP/1.1" 200 4808
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '03mm0jpj4sl125yq3jrn246tug0iryb2' AND "django_session"."expire_date" > '2017-01-12 11:51:19.490996'); args=('03mm0jpj4sl125yq3jrn246tug0iryb2', '2017-01-12 11:51:19.490996')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+Exception while resolving variable 'json_data' in template 'vizualizacija/vizualizacija_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [json_data] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f54c706af28>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f54c702f2b0>, \'request\': <WSGIRequest: GET \'/sl-si/vizualizacija.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'SUCCESS\': 25, \'ERROR\': 40, \'WARNING\': 30, \'DEBUG\': 10}, \'user\': <SimpleLazyObject: <User: markozeman>>, \'csrf_token\': <SimpleLazyObject: \'Rjn30sGowwJ23Jaa1j2Wpc5eZa94Gjnjw91TupnZmhUNSfxMpbxmEwEjuAOsZ6GU\'>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    \'>, <django.template.defaulttags.LoadNode object at 0x7f54c7048208>, <TextNode: \'\\n\\n    <section class="mai\'>, <django.template.defaulttags.URLNode object at 0x7f54c7048240>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f54c7048be0>, <TextNode: \'\\n\\n                <div cl\'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7048780>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7048a20>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7048550>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7048668>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7048b70>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7048ba8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7048898>, <TextNode: \'">\\n                    </\'>, <django.template.loader_tags.IncludeNode object at 0x7f54c7048eb8>, <TextNode: \'\\n\\n    </section>\\n\'>]>}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n\\n    <div id="chartConta\'>, <Variable Node: json_data|safe>, <TextNode: \';\\n\\n        var stevilo_dn\'>]>}]'
+"GET /sl-si/vizualizacija.html HTTP/1.1" 200 5416
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '03mm0jpj4sl125yq3jrn246tug0iryb2' AND "django_session"."expire_date" > '2017-01-12 11:51:22.582322'); args=('03mm0jpj4sl125yq3jrn246tug0iryb2', '2017-01-12 11:51:22.582322')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = '03mm0jpj4sl125yq3jrn246tug0iryb2'; args=('03mm0jpj4sl125yq3jrn246tug0iryb2',)
+(0.000) BEGIN; args=None
+(0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('03mm0jpj4sl125yq3jrn246tug0iryb2'); args=('03mm0jpj4sl125yq3jrn246tug0iryb2',)
+"GET /sl-si/logout HTTP/1.1" 302 0
+"GET /sl-si/ HTTP/1.1" 200 3115
+"GET /en-us/ HTTP/1.1" 200 3094
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'markoz'; args=('markoz',)
+(0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'leqk0dl4082093mn04d5j6fx643avkpi' LIMIT 1; args=('leqk0dl4082093mn04d5j6fx643avkpi',)
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'leqk0dl4082093mn04d5j6fx643avkpi', 'ZjM4NDEyMjExYWRhZGQxYjZhMWY2MzU1MWMzNmI3NDBhNGYwMTA5Mzp7fQ==', '2017-01-26 11:51:39.866073'; args=('leqk0dl4082093mn04d5j6fx643avkpi', 'ZjM4NDEyMjExYWRhZGQxYjZhMWY2MzU1MWMzNmI3NDBhNGYwMTA5Mzp7fQ==', '2017-01-26 11:51:39.866073')
+(0.000) BEGIN; args=None
+(0.000) UPDATE "auth_user" SET "last_login" = '2017-01-12 11:51:39.876794' WHERE "auth_user"."id" = 30; args=('2017-01-12 11:51:39.876794', 30)
+(0.000) BEGIN; args=None
+(0.000) UPDATE "django_session" SET "session_data" = 'OTE0ZmM5YzBiYTFmNmRlOTk1NjI1ZWY0OTAxN2NhMDQyNWJmNzlhMTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjMwIiwiX2F1dGhfdXNlcl9oYXNoIjoiYWJhOWQ1Y2VkYmFiOTgwMDRjYjBlMWU4MDYyNGFmYWEwYzQ2OWIyNiJ9', "expire_date" = '2017-01-26 11:51:39.887060' WHERE "django_session"."session_key" = 'leqk0dl4082093mn04d5j6fx643avkpi'; args=('OTE0ZmM5YzBiYTFmNmRlOTk1NjI1ZWY0OTAxN2NhMDQyNWJmNzlhMTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjMwIiwiX2F1dGhfdXNlcl9oYXNoIjoiYWJhOWQ1Y2VkYmFiOTgwMDRjYjBlMWU4MDYyNGFmYWEwYzQ2OWIyNiJ9', '2017-01-26 11:51:39.887060', 'leqk0dl4082093mn04d5j6fx643avkpi')
+"POST /en-us/ HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'leqk0dl4082093mn04d5j6fx643avkpi' AND "django_session"."expire_date" > '2017-01-12 11:51:39.901011'); args=('leqk0dl4082093mn04d5j6fx643avkpi', '2017-01-12 11:51:39.901011')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "registration_cilj"."id", "registration_cilj"."opis", "registration_cilj"."vrednost", "registration_cilj"."trenutno_privarcevano", "registration_cilj"."od_datuma", "registration_cilj"."do_datuma", "registration_cilj"."uporabnik_id" FROM "registration_cilj" WHERE "registration_cilj"."uporabnik_id" = 30; args=(30,)
+"GET /en-us/vnos.html HTTP/1.1" 200 7522
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'leqk0dl4082093mn04d5j6fx643avkpi' AND "django_session"."expire_date" > '2017-01-12 11:53:31.042942'); args=('leqk0dl4082093mn04d5j6fx643avkpi', '2017-01-12 11:53:31.042942')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+Exception while resolving variable 'izdatki' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [izdatki] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f54c70297f0>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f54c7097f28>, \'request\': <WSGIRequest: GET \'/en-us/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'SUCCESS\': 25, \'ERROR\': 40, \'WARNING\': 30, \'DEBUG\': 10}, \'user\': <SimpleLazyObject: <User: markoz>>, \'csrf_token\': <SimpleLazyObject: \'P0iNeX25xZgZ8n3pP5euldgg0IRtYvKTamo0LueG3sQcTVn8ADxN3dUzNkCNRIwz\'>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    \'>, <django.template.defaulttags.LoadNode object at 0x7f54c7063da0>, <TextNode: \'\\n\\n    <section class="mai\'>, <django.template.defaulttags.URLNode object at 0x7f54c7063e10>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f54c7063d30>, <TextNode: \'\\n\\n                <div cl\'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063e80>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063eb8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063ef0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063f28>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063f98>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063048>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063080>, <TextNode: \', obutev </option>\\n      \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70630b8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063fd0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063160>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063f60>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063208>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70631d0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063198>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063240>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063278>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063358>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70632b0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70440b8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044be0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70442e8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70445c0>, <TextNode: \'">\\n                </div>\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+Exception while resolving variable 'prejemki' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [prejemki] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f54c70297f0>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f54c7097f28>, \'request\': <WSGIRequest: GET \'/en-us/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'SUCCESS\': 25, \'ERROR\': 40, \'WARNING\': 30, \'DEBUG\': 10}, \'user\': <SimpleLazyObject: <User: markoz>>, \'csrf_token\': <SimpleLazyObject: \'P0iNeX25xZgZ8n3pP5euldgg0IRtYvKTamo0LueG3sQcTVn8ADxN3dUzNkCNRIwz\'>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    \'>, <django.template.defaulttags.LoadNode object at 0x7f54c7063da0>, <TextNode: \'\\n\\n    <section class="mai\'>, <django.template.defaulttags.URLNode object at 0x7f54c7063e10>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f54c7063d30>, <TextNode: \'\\n\\n                <div cl\'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063e80>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063eb8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063ef0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063f28>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063f98>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063048>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063080>, <TextNode: \', obutev </option>\\n      \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70630b8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063fd0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063160>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063f60>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063208>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70631d0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063198>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063240>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063278>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063358>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70632b0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70440b8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044be0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70442e8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70445c0>, <TextNode: \'">\\n                </div>\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+Exception while resolving variable 'cilji' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [cilji] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f54c70297f0>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f54c7097f28>, \'request\': <WSGIRequest: GET \'/en-us/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'SUCCESS\': 25, \'ERROR\': 40, \'WARNING\': 30, \'DEBUG\': 10}, \'user\': <SimpleLazyObject: <User: markoz>>, \'csrf_token\': <SimpleLazyObject: \'P0iNeX25xZgZ8n3pP5euldgg0IRtYvKTamo0LueG3sQcTVn8ADxN3dUzNkCNRIwz\'>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    \'>, <django.template.defaulttags.LoadNode object at 0x7f54c7063da0>, <TextNode: \'\\n\\n    <section class="mai\'>, <django.template.defaulttags.URLNode object at 0x7f54c7063e10>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f54c7063d30>, <TextNode: \'\\n\\n                <div cl\'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063e80>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063eb8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063ef0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063f28>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063f98>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063048>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063080>, <TextNode: \', obutev </option>\\n      \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70630b8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063fd0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063160>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063f60>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063208>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70631d0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063198>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063240>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063278>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7063358>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70632b0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70440b8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7044be0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70442e8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70445c0>, <TextNode: \'">\\n                </div>\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+"GET /en-us/pregled.html HTTP/1.1" 200 4777
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'leqk0dl4082093mn04d5j6fx643avkpi' AND "django_session"."expire_date" > '2017-01-12 11:53:33.435824'); args=('leqk0dl4082093mn04d5j6fx643avkpi', '2017-01-12 11:53:33.435824')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+Exception while resolving variable 'json_data' in template 'vizualizacija/vizualizacija_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'json_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [json_data] in '[{\'False\': False, \'True\': True, \'None\': None}, {\'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f54c7048160>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f54c704ef98>, \'request\': <WSGIRequest: GET \'/en-us/vizualizacija.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'SUCCESS\': 25, \'ERROR\': 40, \'WARNING\': 30, \'DEBUG\': 10}, \'user\': <SimpleLazyObject: <User: markoz>>, \'csrf_token\': <SimpleLazyObject: \'LPSvDDIoNiRyqRLGNMllV4kYzQNvGfAG6bYIaaUZjLrLbp5pykEED4YhmsyPzsmm\'>}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    \'>, <django.template.defaulttags.LoadNode object at 0x7f54c7058e48>, <TextNode: \'\\n\\n    <section class="mai\'>, <django.template.defaulttags.URLNode object at 0x7f54c7058f28>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f54c7058828>, <TextNode: \'\\n\\n                <div cl\'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7058588>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70585f8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c70585c0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7058f98>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7058550>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7058fd0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f54c7058630>, <TextNode: \'">\\n                    </\'>, <django.template.loader_tags.IncludeNode object at 0x7f54c7058710>, <TextNode: \'\\n\\n    </section>\\n\'>]>}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n\\n    <div id="chartConta\'>, <Variable Node: json_data|safe>, <TextNode: \';\\n\\n        var stevilo_dn\'>]>}]'
+"GET /en-us/vizualizacija.html HTTP/1.1" 200 5389
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'leqk0dl4082093mn04d5j6fx643avkpi' AND "django_session"."expire_date" > '2017-01-12 11:53:36.658319'); args=('leqk0dl4082093mn04d5j6fx643avkpi', '2017-01-12 11:53:36.658319')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "django_content_type"."app_label", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auth_user_user_permissions" ON ("auth_permission"."id" = "auth_user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_user_user_permissions"."user_id" = 30; args=(30,)
+(0.000) SELECT "django_content_type"."app_label", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auth_group_permissions" ON ("auth_permission"."id" = "auth_group_permissions"."permission_id") INNER JOIN "auth_group" ON ("auth_group_permissions"."group_id" = "auth_group"."id") INNER JOIN "auth_user_groups" ON ("auth_group"."id" = "auth_user_groups"."group_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_user_groups"."user_id" = 30; args=(30,)
+(0.000) SELECT "registration_stanje"."id", "registration_stanje"."tip", "registration_stanje"."stanje", "registration_stanje"."uporabnik_id" FROM "registration_stanje" WHERE ("registration_stanje"."uporabnik_id" = 30 AND "registration_stanje"."tip" = 'denarnica') LIMIT 1; args=(30, 'denarnica')
+(0.000) SELECT "registration_izdatekprejemek"."id", "registration_izdatekprejemek"."tip", "registration_izdatekprejemek"."opis", "registration_izdatekprejemek"."znesek", "registration_izdatekprejemek"."kategorija", "registration_izdatekprejemek"."datum", "registration_izdatekprejemek"."banka_denarnica", "registration_izdatekprejemek"."stanje_id" FROM "registration_izdatekprejemek" WHERE "registration_izdatekprejemek"."stanje_id" = 19 ORDER BY "registration_izdatekprejemek"."datum" ASC; args=(19,)
+"POST /en-us/vizualizacija.html/prikazi HTTP/1.1" 200 5479
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'leqk0dl4082093mn04d5j6fx643avkpi' AND "django_session"."expire_date" > '2017-01-12 11:53:39.821165'); args=('leqk0dl4082093mn04d5j6fx643avkpi', '2017-01-12 11:53:39.821165')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 30; args=(30,)
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'leqk0dl4082093mn04d5j6fx643avkpi'; args=('leqk0dl4082093mn04d5j6fx643avkpi',)
+(0.000) BEGIN; args=None
+(0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('leqk0dl4082093mn04d5j6fx643avkpi'); args=('leqk0dl4082093mn04d5j6fx643avkpi',)
+"GET /en-us/logout HTTP/1.1" 302 0
+"GET /en-us/ HTTP/1.1" 200 3094
+"GET /sl-si/ HTTP/1.1" 200 3115
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'markozeman'; args=('markozeman',)
+(0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4' LIMIT 1; args=('u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4',)
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4', 'ZjM4NDEyMjExYWRhZGQxYjZhMWY2MzU1MWMzNmI3NDBhNGYwMTA5Mzp7fQ==', '2017-01-26 11:57:43.157216'; args=('u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4', 'ZjM4NDEyMjExYWRhZGQxYjZhMWY2MzU1MWMzNmI3NDBhNGYwMTA5Mzp7fQ==', '2017-01-26 11:57:43.157216')
+(0.000) BEGIN; args=None
+(0.000) UPDATE "auth_user" SET "last_login" = '2017-01-12 11:57:43.169310' WHERE "auth_user"."id" = 8; args=('2017-01-12 11:57:43.169310', 8)
+(0.000) BEGIN; args=None
+(0.000) UPDATE "django_session" SET "session_data" = 'MDJiNTU2YWRhMGI0NzIxNmQ4N2FmYjQ5MDE0Y2E4OWY2YTYyYjFkNTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjgiLCJfYXV0aF91c2VyX2hhc2giOiIxOGZhZjI3MmUzNjQ2NjljOTU1MjU5M2QzODQ4YzcwZTcyM2M5OTc2In0=', "expire_date" = '2017-01-26 11:57:43.180090' WHERE "django_session"."session_key" = 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4'; args=('MDJiNTU2YWRhMGI0NzIxNmQ4N2FmYjQ5MDE0Y2E4OWY2YTYyYjFkNTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjgiLCJfYXV0aF91c2VyX2hhc2giOiIxOGZhZjI3MmUzNjQ2NjljOTU1MjU5M2QzODQ4YzcwZTcyM2M5OTc2In0=', '2017-01-26 11:57:43.180090', 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4')
+"POST /sl-si/ HTTP/1.1" 302 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4' AND "django_session"."expire_date" > '2017-01-12 11:57:43.195163'); args=('u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4', '2017-01-12 11:57:43.195163')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+(0.000) SELECT "registration_cilj"."id", "registration_cilj"."opis", "registration_cilj"."vrednost", "registration_cilj"."trenutno_privarcevano", "registration_cilj"."od_datuma", "registration_cilj"."do_datuma", "registration_cilj"."uporabnik_id" FROM "registration_cilj" WHERE "registration_cilj"."uporabnik_id" = 8; args=(8,)
+"GET /sl-si/vnos.html HTTP/1.1" 200 7992
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4' AND "django_session"."expire_date" > '2017-01-12 11:57:51.812301'); args=('u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4', '2017-01-12 11:57:51.812301')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+(0.000) SELECT "registration_cilj"."id", "registration_cilj"."opis", "registration_cilj"."vrednost", "registration_cilj"."trenutno_privarcevano", "registration_cilj"."od_datuma", "registration_cilj"."do_datuma", "registration_cilj"."uporabnik_id" FROM "registration_cilj" WHERE "registration_cilj"."uporabnik_id" = 8; args=(8,)
+"GET /en-us/vnos.html HTTP/1.1" 200 7936
+(0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-12 20:08:19.933929' AND "django_session"."session_key" = 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4'); args=('2017-01-12 20:08:19.933929', 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4')
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/urls/resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/urls/resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'LocaleRegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'LocaleRegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>'
+"GET / HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-12 20:08:20.019739' AND "django_session"."session_key" = 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4'); args=('2017-01-12 20:08:20.019739', 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+"GET /en-us/ HTTP/1.1" 200 3109
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-12 20:08:20.307279' AND "django_session"."session_key" = 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4'); args=('2017-01-12 20:08:20.307279', 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4')
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/urls/resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/urls/resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'LocaleRegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'LocaleRegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<LocaleRegexURLResolver <RegexURLResolver list> (None:None) ^en-us/>'
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2060
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'markozeman'; args=('markozeman',)
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-12 20:08:30.990112' AND "django_session"."session_key" = 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4'); args=('2017-01-12 20:08:30.990112', 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4')
+(0.000) BEGIN; args=None
+(0.000) UPDATE "auth_user" SET "last_login" = '2017-01-12 20:08:30.991900' WHERE "auth_user"."id" = 8; args=('2017-01-12 20:08:30.991900', 8)
+(0.000) BEGIN; args=None
+(0.000) UPDATE "django_session" SET "session_data" = 'OGFhMzIxNjRhMzcwOWEzNWZmZWFiZTY2MjUzZmYzMTM0YzNjYWYyMjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiMThmYWYyNzJlMzY0NjY5Yzk1NTI1OTNkMzg0OGM3MGU3MjNjOTk3NiIsIl9hdXRoX3VzZXJfaWQiOiI4In0=', "expire_date" = '2017-01-26 20:08:31.002668' WHERE "django_session"."session_key" = 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4'; args=('OGFhMzIxNjRhMzcwOWEzNWZmZWFiZTY2MjUzZmYzMTM0YzNjYWYyMjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiMThmYWYyNzJlMzY0NjY5Yzk1NTI1OTNkMzg0OGM3MGU3MjNjOTk3NiIsIl9hdXRoX3VzZXJfaWQiOiI4In0=', '2017-01-26 20:08:31.002668', 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4')
+"POST /en-us/ HTTP/1.1" 302 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-12 20:08:31.040627' AND "django_session"."session_key" = 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4'); args=('2017-01-12 20:08:31.040627', 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+(0.000) SELECT "registration_cilj"."id", "registration_cilj"."opis", "registration_cilj"."vrednost", "registration_cilj"."trenutno_privarcevano", "registration_cilj"."od_datuma", "registration_cilj"."do_datuma", "registration_cilj"."uporabnik_id" FROM "registration_cilj" WHERE "registration_cilj"."uporabnik_id" = 8; args=(8,)
+"GET /en-us/vnos.html HTTP/1.1" 200 7936
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-12 20:08:33.069905' AND "django_session"."session_key" = 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4'); args=('2017-01-12 20:08:33.069905', 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+Exception while resolving variable 'izdatki' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'izdatki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [izdatki] in '[{\'None\': None, \'False\': False, \'True\': True}, {\'user\': <SimpleLazyObject: <User: markozeman>>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f36c55f0240>, \'csrf_token\': <SimpleLazyObject: \'zd8MvDJpp9CHRRg8zBSw3fKYZya00l31xVizjoPLqgZILNeCB1nZDWcXATfQlWpx\'>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f36c569eeb8>, \'request\': <WSGIRequest: GET \'/en-us/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'WARNING\': 30, \'DEBUG\': 10, \'INFO\': 20, \'ERROR\': 40, \'SUCCESS\': 25}}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    \'>, <django.template.defaulttags.LoadNode object at 0x7f36c559e9b0>, <TextNode: \'\\n\\n    <section class="mai\'>, <django.template.defaulttags.URLNode object at 0x7f36c559ea58>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f36c559e908>, <TextNode: \'\\n\\n                <div cl\'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ea90>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eac8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eb00>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eb38>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eb70>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eba8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ec18>, <TextNode: \', obutev </option>\\n      \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ebe0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ec50>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ec88>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ecf8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ecc0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ed30>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ed68>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559edd8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eda0>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ee10>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ee48>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eeb8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ee80>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eef0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ef28>, <TextNode: \'">\\n                </div>\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+Exception while resolving variable 'prejemki' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'prejemki'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [prejemki] in '[{\'None\': None, \'False\': False, \'True\': True}, {\'user\': <SimpleLazyObject: <User: markozeman>>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f36c55f0240>, \'csrf_token\': <SimpleLazyObject: \'zd8MvDJpp9CHRRg8zBSw3fKYZya00l31xVizjoPLqgZILNeCB1nZDWcXATfQlWpx\'>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f36c569eeb8>, \'request\': <WSGIRequest: GET \'/en-us/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'WARNING\': 30, \'DEBUG\': 10, \'INFO\': 20, \'ERROR\': 40, \'SUCCESS\': 25}}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    \'>, <django.template.defaulttags.LoadNode object at 0x7f36c559e9b0>, <TextNode: \'\\n\\n    <section class="mai\'>, <django.template.defaulttags.URLNode object at 0x7f36c559ea58>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f36c559e908>, <TextNode: \'\\n\\n                <div cl\'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ea90>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eac8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eb00>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eb38>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eb70>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eba8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ec18>, <TextNode: \', obutev </option>\\n      \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ebe0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ec50>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ec88>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ecf8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ecc0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ed30>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ed68>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559edd8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eda0>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ee10>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ee48>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eeb8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ee80>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eef0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ef28>, <TextNode: \'">\\n                </div>\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+Exception while resolving variable 'cilji' in template 'pregled/pregled_home.html'.
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'cilji'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/markozeman/anaconda3/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [cilji] in '[{\'None\': None, \'False\': False, \'True\': True}, {\'user\': <SimpleLazyObject: <User: markozeman>>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f36c55f0240>, \'csrf_token\': <SimpleLazyObject: \'zd8MvDJpp9CHRRg8zBSw3fKYZya00l31xVizjoPLqgZILNeCB1nZDWcXATfQlWpx\'>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f36c569eeb8>, \'request\': <WSGIRequest: GET \'/en-us/pregled.html\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'WARNING\': 30, \'DEBUG\': 10, \'INFO\': 20, \'ERROR\': 40, \'SUCCESS\': 25}}, {}, {}, {\'block\': <Block Node: content. Contents: [<TextNode: \'\\n    \'>, <django.template.defaulttags.LoadNode object at 0x7f36c559e9b0>, <TextNode: \'\\n\\n    <section class="mai\'>, <django.template.defaulttags.URLNode object at 0x7f36c559ea58>, <TextNode: \'">\\n                \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f36c559e908>, <TextNode: \'\\n\\n                <div cl\'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ea90>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eac8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eb00>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eb38>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eb70>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eba8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ec18>, <TextNode: \', obutev </option>\\n      \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ebe0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ec50>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ec88>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ecf8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ecc0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ed30>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ed68>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559edd8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eda0>, <TextNode: \' </option>\\n\\n             \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ee10>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ee48>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eeb8>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ee80>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559eef0>, <TextNode: \' </option>\\n              \'>, <django.templatetags.i18n.BlockTranslateNode object at 0x7f36c559ef28>, <TextNode: \'">\\n                </div>\'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n            \'>, <IfNode>, <TextNode: \'\\n        </div>\\n    </sec\'>]>}]'
+"GET /en-us/pregled.html HTTP/1.1" 200 4781
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-12 20:08:34.186885' AND "django_session"."session_key" = 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4'); args=('2017-01-12 20:08:34.186885', 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+(0.000) SELECT "registration_stanje"."id", "registration_stanje"."tip", "registration_stanje"."stanje", "registration_stanje"."uporabnik_id" FROM "registration_stanje" WHERE ("registration_stanje"."uporabnik_id" = 8 AND "registration_stanje"."tip" = 'denarnica') LIMIT 1; args=(8, 'denarnica')
+(0.000) SELECT "registration_izdatekprejemek"."id", "registration_izdatekprejemek"."tip", "registration_izdatekprejemek"."opis", "registration_izdatekprejemek"."znesek", "registration_izdatekprejemek"."kategorija", "registration_izdatekprejemek"."datum", "registration_izdatekprejemek"."banka_denarnica", "registration_izdatekprejemek"."stanje_id" FROM "registration_izdatekprejemek" WHERE ("registration_izdatekprejemek"."stanje_id" = 13 AND "registration_izdatekprejemek"."tip" = 'izdatek'); args=(13, 'izdatek')
+"POST /en-us/pregled.html/isci HTTP/1.1" 200 5682
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2017-01-12 20:09:31.690904' AND "django_session"."session_key" = 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4'); args=('2017-01-12 20:09:31.690904', 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 8; args=(8,)
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4'; args=('u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4',)
+(0.000) BEGIN; args=None
+(0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4'); args=('u1vhvf0ylhjkk6h2qwou8wl6cl0ft7f4',)
+"GET /en-us/logout HTTP/1.1" 302 0
+"GET /en-us/ HTTP/1.1" 200 3094
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()

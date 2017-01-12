@@ -30,6 +30,11 @@ class Stanje(models.Model):
 
 
 class IzdatekPrejemek(models.Model):
+    """ Class representing IzdatekPrejemek.
+
+    This is IzdatekPrejemek model, each Stanje can have more IzdatekPrejemeks.
+
+    """
     tip = models.CharField(max_length=20, default='')
     opis = models.CharField(max_length=100, default='')
     znesek = models.FloatField()
@@ -43,6 +48,11 @@ class IzdatekPrejemek(models.Model):
 
 
 class Cilj(models.Model):
+    """ Class representing Cilj.
+
+    This is Cilj model, each User can have more Ciljs.
+
+    """
     opis = models.CharField(max_length=150, default='')
     vrednost = models.FloatField()
     trenutno_privarcevano = models.FloatField(default=0)
@@ -54,7 +64,17 @@ class Cilj(models.Model):
         return ("{}, {}/{}, {}-{}".format(self.opis, self.trenutno_privarcevano, self.vrednost, self.od_datuma, self.do_datuma))
 
     def is_close_to_end(self):
+        """ Checks if goal is close to an end.
+
+        Returns True if goal is less than a week from now or is already over, otherwise False.
+
+        """
         return timezone.now() + timedelta(days=7) >=  self.do_datuma
 
     def is_accomplished(self):
+        """ Checks if goal is already acomplished.
+
+        Returns True if goal has gathered enough money, otherwise False.
+
+        """
         return self.trenutno_privarcevano >= self.vrednost

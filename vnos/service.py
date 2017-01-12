@@ -5,6 +5,13 @@ logger = logging.getLogger('my_logger')
 
 
 def add_data(request):
+    """ Adds data to the database
+
+    Saves entered data to the database with given form values.
+
+    :param request: HTTP request
+    :return: None
+    """
     dropdown = request.POST['dropdown']
     opis = request.POST['opis']
     znesek = float(request.POST['znesek'])
@@ -30,6 +37,13 @@ def add_data(request):
 
 
 def add_goal(request):
+    """ Adds goal to the database
+
+    Saves entered goal to the database with given form values.
+
+        :param request: HTTP request
+        :return: None
+    """
     opis_privarcevanja = request.POST['opis_privarcevanja']
     vrednost = float(request.POST['vrednost'])
     datum = request.POST['datum']
@@ -40,6 +54,13 @@ def add_goal(request):
 
 
 def add_to_goal(request):
+    """ Adds money to the goal
+
+    Adds given amount of money to the chosen goal and saves changes to the database.
+
+    :param request: HTTP request
+    :return: None
+    """
     vzemi_iz = request.POST['vzemi_iz']
     vrednost = float(request.POST['vrednost'])
     za_cilj = request.POST['za_cilj']

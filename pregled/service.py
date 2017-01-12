@@ -8,6 +8,13 @@ logger = logging.getLogger('my_logger')
 
 
 def search(request):
+    """ Searches in database for given input
+
+    Reads user input and searches database and returns the data in structured form as bullets
+
+    :param request: HTTP request
+    :return: dictionary with keys 'izdatki', 'prejemki' and 'cilji'
+    """
     select_opcija = request.POST['select_opcija']
     kategorija = request.POST['kategorija']
     obdobje = request.POST['obdobje']

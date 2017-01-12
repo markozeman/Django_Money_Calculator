@@ -1,0 +1,43 @@
+.. Money Calculator documentation master file, created by
+   sphinx-quickstart on Thu Jan 12 20:10:43 2017.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to Money Calculator's documentation!
+============================================
+
+Contents of application:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Registration:
+
+   registration
+
+.. toctree::
+   :maxdepth: 2
+   :caption: New entry:
+
+   entry
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Overview:
+
+   overview
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Visualization:
+
+   visualization
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+

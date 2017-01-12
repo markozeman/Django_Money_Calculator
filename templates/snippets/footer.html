@@ -1,14 +1,16 @@
 {% block content %}
-<footer class="footer col-12">
-    <p id="author">
-        &copy; Avtor: Marko Zeman
-    </p>
-    <div class="sources">
-        <p> Uporabljeni viri za slike: </p>
-        <ul>
-            <li> http://www.clipartkid.com/images/332/save-money-images-clipart-panda-free-clipart-images-eIVV8v-clipart.jpg </li>
-            <li> http://subtlepatterns.com/ </li>
-        </ul>
-    </div>
-</footer>
+    {% load i18n %}
+
+    <footer class="footer col-12">
+        <p id="author">
+            &copy; {% blocktrans %}Author:{% endblocktrans %} Marko Zeman
+        </p>
+        <div class="sources">
+            <p> {%  blocktrans %}Image sources:{% endblocktrans %} </p>
+            <ul>
+                <li> http://www.clipartkid.com/images/332/save-money-images-clipart-panda-free-clipart-images-eIVV8v-clipart.jpg </li>
+                <li> http://subtlepatterns.com/ </li>
+            </ul>
+        </div>
+    </footer>
 {% endblock %}

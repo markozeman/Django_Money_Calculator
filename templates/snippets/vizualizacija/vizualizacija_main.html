@@ -1,4 +1,6 @@
 {% block content %}
+    {% load i18n %}
+
     <section class="main col-12">
         <div class="col-12">
             <form method="POST" id="get_visual_minus" action="{% url 'prikaz' %}">
@@ -6,21 +8,21 @@
 
                 <div class="col-2 dropdown izdatki">
                     <select id="select_vizualizacija" name="dropdown">
-                        <option value="wallet"> Denarnica </option>
-                        <option value="bank"> Banka </option>
-                        <option value="wallet_and_bank"> Skupaj </option>
+                        <option value="wallet"> {% blocktrans %}Wallet{% endblocktrans %} </option>
+                        <option value="bank"> {% blocktrans %}Bank{% endblocktrans %} </option>
+                        <option value="wallet_and_bank"> {% blocktrans %}Together{% endblocktrans %} </option>
                     </select>
                 </div>
                 <div class="col-6 izdatki">
                     <div class="col-4">
                         <select name="obdobje">
-                            <option value="teden"> Zadnji teden </option>
-                            <option value="mesec"> Zadnji mesec </option>
-                            <option value="leto"> Zadnje leto </option>
+                            <option value="teden"> {% blocktrans %}Last week{% endblocktrans %} </option>
+                        <option value="mesec"> {% blocktrans %}Last month{% endblocktrans %} </option>
+                        <option value="leto"> {% blocktrans %}Last year{% endblocktrans %} </option>
                         </select>
                     </div>
                     <div class="col-2">
-                        <input type="submit" name="prikazi" value="Prikaži">
+                        <input type="submit" name="prikazi" value="{% blocktrans %}Show{% endblocktrans %}">
                     </div>
                 </div>
             </form>

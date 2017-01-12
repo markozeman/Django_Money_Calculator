@@ -1,11 +1,13 @@
 {% block content %}
+    {% load i18n %}
+
     <section class="main col-12">
         <div class="dropdown" style="margin: 30px">
             <select class="select_dropdown" name="dropdown" onchange="showGoal(this)">
-                <option value="wallet"> Denarnica </option>
-                <option value="bank"> Banka </option>
-                <option value="new_goal"> Nov cilj </option>
-                <option value="goal_add_money"> Privarčuj za cilj </option>
+                <option value="wallet">  {% blocktrans %}Wallet{% endblocktrans %} </option>
+                <option value="bank"> {% blocktrans %}Bank{% endblocktrans %} </option>
+                <option value="new_goal"> {% blocktrans %}New goal{% endblocktrans %} </option>
+                <option value="goal_add_money"> {% blocktrans %}Add to goal{% endblocktrans %} </option>
             </select>
         </div>
 
@@ -16,41 +18,41 @@
 
                     <div class="dropdown" style="margin: 30px">
                         <select class="select_dropdown" name="dropdown" onchange="showGoal(this)">
-                            <option value="wallet"> Uporabi denarnico </option>
-                            <option value="bank"> Uporabi bančni račun </option>
+                            <option value="wallet"> {% blocktrans %}Use wallet{% endblocktrans %} </option>
+                            <option value="bank"> {% blocktrans %}Use bank account{% endblocktrans %} </option>
                         </select>
                     </div>
 
                     <div class="col-3">
-                        Opis: <input type="text" name="opis" placeholder="Vnesite opis...">
+                        {% blocktrans %}Description:{% endblocktrans %} <input type="text" name="opis" placeholder="{% blocktrans %}Type description...{% endblocktrans %}">
                     </div>
                     <div class="col-3">
-                        Znesek v €: <input type="text" name="znesek" placeholder="Vnesite znesek...">
+                        {% blocktrans %}Value in €:{% endblocktrans %} <input type="text" name="znesek" placeholder="{% blocktrans %}Type value...{% endblocktrans %}">
                     </div>
                     <div class="col-3">
                         <select id="select_category" name="kategorija">
-                            <option value="hrana"> Hrana </option>
-                            <option value="oblacila"> Oblačila, obutev </option>
-                            <option value="tehnika"> Tehnika </option>
-                            <option value="popravila"> Popravila </option>
-                            <option value="gospodinjstvo"> Gospodinjstvo </option>
-                            <option value="prevoz"> Prevoz </option>
-                            <option value="pocitnice"> Počitnice, potovanja </option>
-                            <option value="darila"> Darila </option>
-                            <option value="drugo"> Drugo </option>
+                            <option value="hrana"> {% blocktrans %}Food{% endblocktrans %} </option>
+                            <option value="oblacila"> {% blocktrans %}Clothes{% endblocktrans %} </option>
+                            <option value="tehnika"> {% blocktrans %}Technology{% endblocktrans %} </option>
+                            <option value="popravila"> {% blocktrans %}Repairs{% endblocktrans %} </option>
+                            <option value="gospodinjstvo"> {% blocktrans %}Technology{% endblocktrans %} </option>
+                            <option value="prevoz"> {% blocktrans %}Comute{% endblocktrans %} </option>
+                            <option value="pocitnice"> {% blocktrans %}Vacation, travel{% endblocktrans %} </option>
+                            <option value="darila"> {% blocktrans %}Presents{% endblocktrans %} </option>
+                            <option value="drugo"> {% blocktrans %}Other{% endblocktrans %} </option>
 
-                            <option value="placa"> Plača </option>
-                            <option value="ostali_prihodki"> Ostali prihodki </option>
+                            <option value="placa"> {% blocktrans %}Salary{% endblocktrans %} </option>
+                            <option value="ostali_prihodki"> {% blocktrans %}Other income{% endblocktrans %} </option>
 
-                            <option value="dvig"> Dvig gotovine </option>
-                            <option value="polog"> Polog gotovine </option>
+                            <option value="dvig">  {% blocktrans %}Cash withdrawals{% endblocktrans %} </option>
+                            <option value="polog">  {% blocktrans %}Cash deposit{% endblocktrans %} </option>
                         </select>
                     </div>
                     <div class="col-1">
-                        <input type="submit" name="plus" value="Dodaj" onclick="Clicked(this);">
+                        <input type="submit" name="plus" value="{% blocktrans %}Add{% endblocktrans %}" onclick="Clicked(this);">
                     </div>
                     <div class="col-1">
-                        <input type="submit" name="minus" value="Odvzemi" class="minus_button" onclick="Clicked(this);">
+                        <input type="submit" name="minus" value="{% blocktrans %}Take{% endblocktrans %}" class="minus_button" onclick="Clicked(this);">
                     </div>
                 </form>
             </div>
@@ -61,16 +63,16 @@
                 <form method="post" id="add_goal" action="{% url 'dodaj_cilj' %}">
                     {% csrf_token %}
                     <div class="col-3">
-                        Varčujem za: <input type="text" name="opis_privarcevanja" placeholder="Vnesite cilj varčevanja...">
+                        {% blocktrans %}Saving for:{% endblocktrans %} <input type="text" name="opis_privarcevanja" placeholder="{% blocktrans %}Type saving goal...{% endblocktrans %}">
                     </div>
                     <div class="col-3">
-                        Vrednost v €: <input type="text" name="vrednost" placeholder="Vnesite vrednost...">
+                        {% blocktrans %}Value in €:{% endblocktrans %} <input type="text" name="vrednost" placeholder="{% blocktrans %}Type value...{% endblocktrans %}">
                     </div>
                     <div class="col-4">
-                        Privarčeval bom do: <input type="date" name="datum"> <br>
+                        {% blocktrans %}I'll save till: {% endblocktrans %} <input type="date" name="datum"> <br>
                     </div>
                     <div class="col-2">
-                        <input type="submit" value="Dodaj">
+                        <input type="submit" value="{% blocktrans %}Add{% endblocktrans %}">
                     </div>
                 </form>
             </div>
@@ -81,12 +83,12 @@
                 <form method="post" id="add_to_goal" action="{% url 'dodaj_cilju' %}">
                     {% csrf_token %}
                     <div class="col-4">
-                        Vrednost v €: <input type="text" name="vrednost" placeholder="Vnesite vrednost...">
+                        {% blocktrans %}Value in €:{% endblocktrans %} <input type="text" name="vrednost" placeholder="{% blocktrans %}Type value...{% endblocktrans %}">
                     </div>
                     <div class="col-3">
                         <select name="vzemi_iz">
-                            <option value="wallet"> Vzemi iz denarnice </option>
-                            <option value="bank"> Vzemi iz banke </option>
+                            <option value="wallet"> {% blocktrans %}Take from wallet{% endblocktrans %} </option>
+                            <option value="bank"> {% blocktrans %}Take from bank account{% endblocktrans %} </option>
                         </select>
                     </div>
                     <div class="col-3">
@@ -97,7 +99,7 @@
                         </select>
                     </div>
                     <div class="col-2">
-                        <input type="submit" value="Dodaj">
+                        <input type="submit" value="{% blocktrans %}Add{% endblocktrans %}">
                     </div>
                 </form>
             </div>

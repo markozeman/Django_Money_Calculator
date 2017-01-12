@@ -1,6 +1,9 @@
 {% block content %}
+    {% load i18n %}
+
     <li>
-        Opis:  <b>{{ izdatek.opis }}</b> <br> Kategorija:  <b>{{ izdatek.kategorija }}</b> <br> Znesek:  <b>{{ izdatek.znesek}} €</b> <br> Datum:  <b>{{ izdatek.datum}}</b> <br>
+        {% blocktrans trimmed with o=izdatek.opis k=izdatek.kategorija z=izdatek.znesek d=izdatek.datum%}
+            Description:  <b>{{ o }}</b> <br> Category:  <b>{{ k }}</b> <br> Amount:  <b>{{ z }} €</b> <br> Date:  <b>{{ d }}</b> <br>{% endblocktrans %}
     </li>
     <br>
 {% endblock %}

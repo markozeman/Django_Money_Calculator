@@ -1,25 +1,27 @@
 {% block content %}
     {% load staticfiles %}
+    {% load i18n %}
+
     <header class="header col-12">
         <div class="col-1">
             <img src="{% static 'images/logo.jpg' %}" class="logo" alt="Logo">
         </div>
         <div class="title col-5">
-            <h1> Kalkulator stroškov </h1>
+            <h1> {% blocktrans %}Money Calculator{% endblocktrans %} </h1>
         </div>
         {% if user.is_authenticated %}
             <div class="slogan col-4">
-                <h3> {{ user.username }} : Be smart, save money </h3>
+                <h3> {% blocktrans with u=user.username %}{{ u }} : Be smart, save money{% endblocktrans %} </h3>
             </div>
             <div class="login col-2">
-                <a href="{% url 'logout' %}"> <button type="button" class="registration"> Odjava </button> </a>
+                <a href="{% url 'logout' %}"> <button type="button" class="registration"> {% blocktrans %}Sign out{% endblocktrans %} </button> </a>
             </div>
         {% else %}
             <div class="slogan col-4">
-                <h3> Be smart, save money </h3>
+                <h3> {% blocktrans %}Be smart, save money{% endblocktrans %} </h3>
             </div>
             <div class="login col-2">
-                <a href="{% url 'registration' %}"> <button type="button" class="registration"> Registracija </button> </a>
+                <a href="{% url 'registration' %}"> <button type="button" class="registration"> {% blocktrans %}Registration{% endblocktrans %} </button> </a>
             </div>
         {% endif %}
     </header>

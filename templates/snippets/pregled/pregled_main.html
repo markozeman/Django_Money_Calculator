@@ -1,4 +1,6 @@
 {% block content %}
+    {% load i18n %}
+
     <section class="main col-12">
         <div class="not_goal_results col-12">
             <form method="post" id="pregled_form" action="{% url 'iskanje' %}">
@@ -6,51 +8,51 @@
 
                 <div class="dropdown">
                     <select onchange="change_pregled_dropdown(this)" name="select_opcija" id="pregled_select" style="margin: 20px">
-                        <option value="wallet"> Denarnica </option>
-                        <option value="bank"> Banka </option>
-                        <option value="goals"> Cilji </option>
+                        <option value="wallet"> {% blocktrans %}Wallet{% endblocktrans %} </option>
+                        <option value="bank"> {% blocktrans %}Bank{% endblocktrans %} </option>
+                        <option value="goals"> {% blocktrans %}Goals{% endblocktrans %} </option>
                     </select>
                 </div>
 
                 <div class="choose_option col-3">
                     <select name="kategorija">
-                        <option value="vsi_izdatki"> Vsi izdatki </option>
-                        <option value="vsi_prejemki"> Vsi prejemki </option>
-                        <option value="hrana"> Hrana </option>
-                        <option value="oblacila"> Oblačila, obutev </option>
-                        <option value="tehnika"> Tehnika </option>
-                        <option value="popravila"> Popravila </option>
-                        <option value="gospodinjstvo"> Gospodinjstvo </option>
-                        <option value="prevoz"> Prevoz </option>
-                        <option value="pocitnice"> Počitnice, potovanja </option>
-                        <option value="darila"> Darila </option>
-                        <option value="drugo"> Drugo </option>
+                        <option value="vsi_izdatki"> {% blocktrans %}All expenses{% endblocktrans %} </option>
+                        <option value="vsi_prejemki"> {% blocktrans %}All revenue{% endblocktrans %} </option>
+                        <option value="hrana"> {% blocktrans %}Food{% endblocktrans %} </option>
+                        <option value="oblacila"> {% blocktrans %}Clothes{% endblocktrans %}, obutev </option>
+                        <option value="tehnika"> {% blocktrans %}Technology{% endblocktrans %} </option>
+                        <option value="popravila"> {% blocktrans %}Repairs{% endblocktrans %} </option>
+                        <option value="gospodinjstvo"> {% blocktrans %}Technology{% endblocktrans %} </option>
+                        <option value="prevoz"> {% blocktrans %}Comute{% endblocktrans %} </option>
+                        <option value="pocitnice"> {% blocktrans %}Vacation, travel{% endblocktrans %} </option>
+                        <option value="darila"> {% blocktrans %}Presents{% endblocktrans %} </option>
+                        <option value="drugo"> {% blocktrans %}Other{% endblocktrans %} </option>
 
-                        <option value="placa"> Plača </option>
-                        <option value="ostali_prihodki"> Ostali prihodki </option>
+                        <option value="placa"> {% blocktrans %}Salary{% endblocktrans %} </option>
+                        <option value="ostali_prihodki"> {% blocktrans %}Other income{% endblocktrans %} </option>
 
-                        <option value="dvig"> Dvig gotovine </option>
-                        <option value="polog"> Polog gotovine </option>
+                        <option value="dvig">  {% blocktrans %}Cash withdrawals{% endblocktrans %} </option>
+                        <option value="polog">  {% blocktrans %}Cash deposit{% endblocktrans %} </option>
                     </select>
                 </div>
 
                 <div class="choose_period col-3">
                     <select name="obdobje">
-                        <option value="teden"> Zadnji teden </option>
-                        <option value="mesec"> Zadnji mesec </option>
-                        <option value="leto"> Zadnje leto </option>
+                        <option value="teden"> {% blocktrans %}Last week{% endblocktrans %} </option>
+                        <option value="mesec"> {% blocktrans %}Last month{% endblocktrans %} </option>
+                        <option value="leto"> {% blocktrans %}Last year{% endblocktrans %} </option>
                     </select>
                 </div>
 
                 <div class="confirm col-2">
-                    <input type="submit" name="preglej" value="Preglej">
+                    <input type="submit" name="preglej" value="{% blocktrans %}Check{% endblocktrans %}">
                 </div>
             </form>
         </div>
 
         <div class="result_set col-12">
             {% if izdatki %}
-                <p style="margin-left: 40px; color: #B90000; font-weight: bold; font-style: italic;"> Izdatki: </p>
+                <p style="margin-left: 40px; color: #B90000; font-weight: bold; font-style: italic;"> {% blocktrans %}Expenses: {% endblocktrans %} </p>
                 <ul>
                     {% for izdatek in izdatki %}
                         {% include "snippets/izdatek.html" %}
@@ -58,7 +60,7 @@
                 </ul>
             {% endif %}
             {% if prejemki %}
-                <p style="margin-left: 40px; color: #80ff80; font-weight: bold; font-style: italic;"> Prejemki: </p>
+                <p style="margin-left: 40px; color: #80ff80; font-weight: bold; font-style: italic;"> {% blocktrans %}Incomes: {% endblocktrans %} </p>
                 <ul>
                     {% for prejemek in prejemki %}
                         {% include 'snippets/prejemek.html' %}
@@ -66,7 +68,7 @@
                 </ul>
             {% endif %}
             {% if cilji %}
-                <p style="margin-left: 40px; color: #0000B9; font-weight: bold; font-style: italic;"> Cilji: </p>
+                <p style="margin-left: 40px; color: #0000B9; font-weight: bold; font-style: italic;"> {% blocktrans %}Goals: {% endblocktrans %} </p>
                 <ul>
                     {% for cilj in cilji %}
                         {% include 'snippets/cilj.html' %}

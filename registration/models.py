@@ -7,6 +7,11 @@ from datetime import datetime, timedelta
 
 
 class Stanje(models.Model):
+    """ Class representing Stanje.
+
+    This is Stanje model, each Uporabnik has two Stanjes.
+
+    """
     tip = models.CharField(max_length=20, default='')
     stanje = models.FloatField(default=0)
     uporabnik = models.ForeignKey(User, on_delete=models.CASCADE, default='')
@@ -16,6 +21,11 @@ class Stanje(models.Model):
         return ("{} - {}: {}".format(self.uporabnik.username, self.tip, self.stanje))
 
     def is_negative(self):
+        """ Returns True if Stanje is negative
+
+        Returns True if Stanje is negative, False otherwise.
+
+        """
         return  self.stanje < 0
 
 

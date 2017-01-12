@@ -1,13 +1,15 @@
 {% block content %}
+    {% load i18n %}
+
     <nav class="navigation col-12">
         <div class="nav_buttons col-4">
-            <a href="{% url 'vnos' %}"> <button type="button" id="nov_vnos"> Nov vnos </button> </a>
+            <a href="{% url 'vnos' %}"> <button type="button" id="nov_vnos"> {% blocktrans %}New entry{% endblocktrans %} </button> </a>
         </div>
         <div class="nav_buttons col-4">
-            <a href="{% url 'pregled' %}"> <button type="button" id="pregled"> Pregled </button> </a>
+            <a href="{% url 'pregled' %}"> <button type="button" id="pregled"> {% blocktrans %}Overview{% endblocktrans %} </button> </a>
         </div>
         <div class="nav_buttons col-4">
-            <a href="{% url 'vizualizacija' %}"> <button type="button" id="vizualizacija"> Vizualizacija </button> </a>
+            <a href="{% url 'vizualizacija' %}"> <button type="button" id="vizualizacija"> {% blocktrans %}Visualization{% endblocktrans %} </button> </a>
         </div>
     </nav>
 {% endblock %}

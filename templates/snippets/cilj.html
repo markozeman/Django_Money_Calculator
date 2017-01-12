@@ -1,11 +1,15 @@
 {% block content %}
+    {% load i18n %}
+
     <li>
-        Opis: <b>{{ cilj.opis }}</b> <br> Status varčevanja: <b>{{ cilj.trenutno_privarcevano }} / {{ cilj.vrednost}}</b> <br> Časovnica: <b>{{ cilj.od_datuma }} - {{ cilj.do_datuma}}</b> <br>
+        {% blocktrans trimmed with o=cilj.opis t=cilj.trenutno_privarcevano v=cilj.vrednost od=cilj.od_datuma do=cilj.do_datuma%}
+            Description:  <b>{{ o }}</b> <br> Saving status: <b>{{ t }} / {{ v }}</b> <br> Timeline: <b>{{ od }} - {{ do }}</b> <br>{% endblocktrans %}
+
         {% if cilj.is_accomplished %}
             <p style="color: greenyellow"> &#10004;  &#10004;  &#10004; </p>
         {% else %}
             {% if cilj.is_close_to_end %}
-                <p style="color: darkred"> Do končnega datuma je manj kot teden dni ali cilj je potekel ! </p>
+                <p style="color: darkred"> {% blocktrans %}The final date is less than a week from now or a goal is expired!{% endblocktrans %} </p>
             {% endif %}
         {% endif %}
     </li>

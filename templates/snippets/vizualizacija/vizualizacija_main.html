@@ -2,6 +2,15 @@
     {% load i18n %}
 
     <section class="main col-12">
+        <div id="language_list">
+            {% get_available_languages as languages %}
+            {% for lang_code, lang_name in languages %}
+                {% language lang_code %}
+                <span> | </span> <a href="{% url 'vizualizacija' %}">{{ lang_name }}</a> <span> | </span>
+                {% endlanguage %}
+            {% endfor %}
+        </div>
+
         <div class="col-12">
             <form method="POST" id="get_visual_minus" action="{% url 'prikaz' %}">
                 {% csrf_token %}

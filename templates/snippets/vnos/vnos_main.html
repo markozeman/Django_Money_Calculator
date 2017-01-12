@@ -2,6 +2,15 @@
     {% load i18n %}
 
     <section class="main col-12">
+        <div id="language_list">
+            {% get_available_languages as languages %}
+            {% for lang_code, lang_name in languages %}
+                {% language lang_code %}
+                <span> | </span> <a href="{% url 'vnos' %}">{{ lang_name }}</a> <span> | </span>
+                {% endlanguage %}
+            {% endfor %}
+        </div>
+
         <div class="dropdown" style="margin: 30px">
             <select class="select_dropdown" name="dropdown" onchange="showGoal(this)">
                 <option value="wallet">  {% blocktrans %}Wallet{% endblocktrans %} </option>

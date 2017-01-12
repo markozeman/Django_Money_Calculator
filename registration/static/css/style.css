@@ -273,6 +273,11 @@ input[type='checkbox']:checked {
     width: 100%;
 }
 
+#language_list {
+    margin: 20px !important;
+    text-align: center;
+}
+
 
 .canvasjs-chart-container {
     position: absolute !important;
